@@ -2,6 +2,8 @@
 
 Single-page marketing website for **LUCKROT** by OptiCube.
 
+Steam page: [LUCKROT on Steam](https://store.steampowered.com/app/3823650/LUCKROT/)
+
 ## Preview
 
 ![LUCKROT Main Visual](images/branding/photo_2026-02-21%2021.09.40.jpeg)
