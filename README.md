@@ -6,9 +6,7 @@ Steam page: [LUCKROT on Steam](https://store.steampowered.com/app/3823650/LUCKRO
 
 ## Preview
 
-![LUCKROT Main Visual](images/branding/photo_2026-02-21%2021.09.40.jpeg)
-![LUCKROT Character Preview](images/showcase/characters/char-03.jpeg)
-![LUCKROT Weapon Preview](images/showcase/weapons/weap-02.jpeg)
+![LUCKROT Main Visual](images/branding/photo_2026-02-21%2021.09.34.jpeg)
 
 ## What is on the page
 
