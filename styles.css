@@ -268,6 +268,55 @@ p {
   margin-top: 0.7rem;
 }
 
+.system-req {
+  margin: 1.1rem 0 2.4rem;
+  border: 1px solid var(--line);
+  background: rgba(22, 13, 9, 0.94);
+  padding: 1.1rem;
+  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
+}
+
+.content-warning {
+  margin: 0 0 0.9rem;
+  padding: 0.75rem 0.85rem;
+  border-left: 4px solid var(--accent);
+  border: 1px solid rgba(255, 166, 97, 0.35);
+  background: rgba(255, 154, 61, 0.12);
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.system-req h3 {
+  margin: 0 0 0.6rem;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.2rem;
+}
+
+.req-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+  margin-top: 0.8rem;
+}
+
+.req-grid article {
+  border: 1px solid rgba(255, 166, 97, 0.18);
+  background: rgba(255, 182, 122, 0.06);
+  padding: 0.8rem;
+}
+
+.req-grid ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+.req-grid li + li {
+  margin-top: 0.35rem;
+}
+
 .featured-meta li {
   display: flex;
   justify-content: space-between;
@@ -524,6 +573,10 @@ p {
 
   .stats,
   .games-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .req-grid {
     grid-template-columns: 1fr;
   }
 
