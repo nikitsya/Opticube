@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OptiCube Games</title>
+    <meta
+      name="description"
+      content="OptiCube game studio showcase page with featured titles and live status."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Chakra+Petch:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape--top"></div>
+    <div class="bg-shape bg-shape--bottom"></div>
+
+    <header class="header container">
+      <p class="brand">OptiCube</p>
+      <nav class="nav">
+        <a href="#featured">Featured</a>
+        <a href="#games">Games</a>
+        <a href="#stats">Stats</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <p class="eyebrow">Indie Shooter Studio</p>
+        <h1>Fast, brutal, and replayable games from OptiCube.</h1>
+        <p class="hero-copy">
+          One page for your current game lineup: featured release, quick studio
+          metrics, and a clean game list with status and platform details.
+        </p>
+        <a href="#games" class="btn">Explore Games</a>
+      </section>
+
+      <section class="featured" id="featured">
+        <div>
+          <p class="eyebrow">Featured</p>
+          <h2>LUCKROT</h2>
+          <p>
+            Roguelike shooter set in a dystopian livestreamed gameshow. Earn
+            audience donations, gamble for upgrades, and survive wave after
+            wave.
+          </p>
+          <ul class="featured-meta">
+            <li><span>Release</span><strong>Coming Soon</strong></li>
+            <li><span>Genre</span><strong>Action Roguelike</strong></li>
+            <li><span>Platform</span><strong>PC (Steam)</strong></li>
+          </ul>
+        </div>
+        <div class="featured-media" role="img" aria-label="LUCKROT game frame"></div>
+      </section>
+
+      <section class="stats" id="stats">
+        <article>
+          <p class="stat-value" id="total-games">0</p>
+          <p class="stat-label">Games in portfolio</p>
+        </article>
+        <article>
+          <p class="stat-value" id="upcoming-games">0</p>
+          <p class="stat-label">Upcoming releases</p>
+        </article>
+        <article>
+          <p class="stat-value" id="live-games">0</p>
+          <p class="stat-label">Live projects</p>
+        </article>
+        <article>
+          <p class="stat-value">3</p>
+          <p class="stat-label">Core genres</p>
+        </article>
+      </section>
+
+      <section class="games" id="games">
+        <div class="games-head">
+          <div>
+            <p class="eyebrow">Portfolio</p>
+            <h2>Game lineup</h2>
+          </div>
+          <div class="filters" aria-label="Game filters">
+            <button data-filter="all" class="is-active">All</button>
+            <button data-filter="upcoming">Upcoming</button>
+            <button data-filter="live">Live</button>
+            <button data-filter="prototype">Prototype</button>
+          </div>
+        </div>
+        <div class="games-grid" id="games-grid"></div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <p>OptiCube Studio</p>
+      <p>Built as a one-page game showcase.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
