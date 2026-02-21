@@ -237,7 +237,7 @@ p {
 
 .featured-media {
   background: linear-gradient(140deg, rgba(20, 10, 7, 0.64), rgba(41, 21, 12, 0.92)),
-    url("https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3823650/ss_2fdbfa4b3ecf44dc6fc9d74d76c176f28022ef96.1920x1080.jpg")
+    url("images/branding/photo_2026-02-21%2021.09.40.jpeg")
       center/cover no-repeat;
   min-height: 280px;
   filter: contrast(1.22) saturate(0.8) sepia(0.2);
