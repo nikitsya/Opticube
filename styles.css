@@ -244,6 +244,13 @@ p {
   filter: contrast(1.08);
 }
 
+.btn-wishlist {
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  padding: 0.98rem 1.45rem;
+  min-width: min(100%, 320px);
+  justify-content: center;
+}
+
 .featured {
   margin-top: 0.8rem;
   border: 1px solid var(--line);
