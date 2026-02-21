@@ -1,11 +1,23 @@
-const futureBtn = document.querySelector(".future-btn");
-const currentYearNode = document.getElementById("current-year");
+async function loadPartial(path, targetId) {
+  const target = document.getElementById(targetId);
+  if (!target) {
+    return;
+  }
 
-if (currentYearNode) {
-  currentYearNode.textContent = String(new Date().getFullYear());
+  const response = await fetch(path, { cache: "no-cache" });
+  if (!response.ok) {
+    throw new Error(`Failed to load ${path}`);
+  }
+
+  target.innerHTML = await response.text();
 }
 
-if (futureBtn) {
+function initHeaderInteractions() {
+  const futureBtn = document.querySelector(".future-btn");
+  if (!futureBtn) {
+    return;
+  }
+
   futureBtn.addEventListener("click", () => {
     futureBtn.classList.add("is-pulse");
     window.setTimeout(() => {
@@ -14,114 +26,141 @@ if (futureBtn) {
   });
 }
 
-const mediaData = {
-  characters: Array.from({ length: 7 }, (_, index) => {
-    const number = String(index + 1).padStart(2, "0");
-    return {
-      src: `images/showcase/characters/char-${number}.jpeg`,
-      label: `Character ${number}`,
-    };
-  }),
-  weapons: [
-    { src: "images/showcase/weapons/weap-01.jpeg", label: "Weapon 01" },
-    { src: "images/showcase/weapons/weap-02.jpeg", label: "Weapon 02" },
-    { src: "images/showcase/weapons/weap-03.jpeg", label: "Weapon 03" },
-    { src: "images/showcase/weapons/weap-04.jpeg", label: "Weapon 04" },
-    { src: "images/showcase/weapons/weap-05.jpeg", label: "Weapon 05" },
-    { src: "images/showcase/weapons/weap-06.jpeg", label: "Weapon 06" },
-  ],
-};
-
-const mediaGrid = document.getElementById("media-grid");
-const mediaTabs = document.querySelectorAll(".media-tab");
-const lightbox = document.getElementById("lightbox");
-const lightboxImage = document.getElementById("lightbox-image");
-const lightboxClose = document.getElementById("lightbox-close");
-
-let activeMedia = "characters";
-
-function openLightbox(src, label) {
-  if (!lightbox || !lightboxImage) {
+function initFooterYear() {
+  const currentYearNode = document.getElementById("current-year");
+  if (!currentYearNode) {
     return;
   }
 
-  lightboxImage.src = src;
-  lightboxImage.alt = label;
-  lightbox.hidden = false;
-  document.body.style.overflow = "hidden";
+  currentYearNode.textContent = String(new Date().getFullYear());
 }
 
-function closeLightbox() {
-  if (!lightbox || !lightboxImage) {
-    return;
+function initMediaHub() {
+  const mediaData = {
+    characters: Array.from({ length: 7 }, (_, index) => {
+      const number = String(index + 1).padStart(2, "0");
+      return {
+        src: `images/showcase/characters/char-${number}.jpeg`,
+        label: `Character ${number}`,
+      };
+    }),
+    weapons: [
+      { src: "images/showcase/weapons/weap-01.jpeg", label: "Weapon 01" },
+      { src: "images/showcase/weapons/weap-02.jpeg", label: "Weapon 02" },
+      { src: "images/showcase/weapons/weap-03.jpeg", label: "Weapon 03" },
+      { src: "images/showcase/weapons/weap-04.jpeg", label: "Weapon 04" },
+      { src: "images/showcase/weapons/weap-05.jpeg", label: "Weapon 05" },
+      { src: "images/showcase/weapons/weap-06.jpeg", label: "Weapon 06" },
+    ],
+  };
+
+  const mediaGrid = document.getElementById("media-grid");
+  const mediaTabs = document.querySelectorAll(".media-tab");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+  const lightboxClose = document.getElementById("lightbox-close");
+  let activeMedia = "characters";
+
+  function openLightbox(src, label) {
+    if (!lightbox || !lightboxImage) {
+      return;
+    }
+
+    lightboxImage.src = src;
+    lightboxImage.alt = label;
+    lightbox.hidden = false;
+    document.body.style.overflow = "hidden";
   }
 
-  lightbox.hidden = true;
-  lightboxImage.src = "";
-  document.body.style.overflow = "";
-}
+  function closeLightbox() {
+    if (!lightbox || !lightboxImage) {
+      return;
+    }
 
-function renderMedia(kind) {
-  if (!mediaGrid) {
-    return;
+    lightbox.hidden = true;
+    lightboxImage.src = "";
+    document.body.style.overflow = "";
   }
 
-  mediaGrid.innerHTML = "";
-  mediaData[kind].forEach((item) => {
-    const card = document.createElement("button");
-    card.type = "button";
-    card.className = "media-card";
+  function renderMedia(kind) {
+    if (!mediaGrid) {
+      return;
+    }
 
-    const image = document.createElement("img");
-    image.src = item.src;
-    image.alt = item.label;
-    image.loading = "lazy";
+    mediaGrid.innerHTML = "";
+    mediaData[kind].forEach((item) => {
+      const card = document.createElement("button");
+      card.type = "button";
+      card.className = "media-card";
 
-    const caption = document.createElement("p");
-    caption.textContent = item.label;
+      const image = document.createElement("img");
+      image.src = item.src;
+      image.alt = item.label;
+      image.loading = "lazy";
 
-    card.appendChild(image);
-    card.appendChild(caption);
-    card.addEventListener("click", () => openLightbox(item.src, item.label));
-    mediaGrid.appendChild(card);
-  });
-}
+      const caption = document.createElement("p");
+      caption.textContent = item.label;
 
-if (mediaTabs.length > 0 && mediaGrid) {
-  mediaTabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const next = tab.dataset.media;
-      if (!next || next === activeMedia) {
-        return;
-      }
-
-      activeMedia = next;
-      mediaTabs.forEach((node) => {
-        const selected = node === tab;
-        node.classList.toggle("is-active", selected);
-        node.setAttribute("aria-selected", selected ? "true" : "false");
-      });
-      renderMedia(activeMedia);
+      card.appendChild(image);
+      card.appendChild(caption);
+      card.addEventListener("click", () => openLightbox(item.src, item.label));
+      mediaGrid.appendChild(card);
     });
-  });
+  }
 
-  renderMedia(activeMedia);
-}
+  if (mediaTabs.length > 0 && mediaGrid) {
+    mediaTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const next = tab.dataset.media;
+        if (!next || next === activeMedia) {
+          return;
+        }
 
-if (lightboxClose) {
-  lightboxClose.addEventListener("click", closeLightbox);
-}
+        activeMedia = next;
+        mediaTabs.forEach((node) => {
+          const selected = node === tab;
+          node.classList.toggle("is-active", selected);
+          node.setAttribute("aria-selected", selected ? "true" : "false");
+        });
+        renderMedia(activeMedia);
+      });
+    });
 
-if (lightbox) {
-  lightbox.addEventListener("click", (event) => {
-    if (event.target === lightbox) {
+    renderMedia(activeMedia);
+  }
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener("click", closeLightbox);
+  }
+
+  if (lightbox) {
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox && !lightbox.hidden) {
       closeLightbox();
     }
   });
 }
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && lightbox && !lightbox.hidden) {
-    closeLightbox();
+async function bootstrap() {
+  try {
+    await Promise.all([
+      loadPartial("partials/header.html", "header-root"),
+      loadPartial("partials/footer.html", "footer-root"),
+    ]);
+  } catch (error) {
+    console.error("Failed to load partials:", error);
   }
-});
+
+  initHeaderInteractions();
+  initFooterYear();
+  initMediaHub();
+}
+
+bootstrap();
