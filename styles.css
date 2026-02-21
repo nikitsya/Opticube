@@ -1,7 +1,7 @@
 :root {
-  --bg-0: #050a13;
-  --bg-1: #0d1a2d;
-  --bg-2: #142b41;
+  --bg-0: #07111a;
+  --bg-1: #112434;
+  --bg-2: #1e3346;
   --surface: rgba(9, 21, 35, 0.82);
   --surface-strong: rgba(15, 31, 49, 0.94);
   --line: rgba(135, 185, 221, 0.3);
@@ -29,9 +29,10 @@ body {
   overflow-x: hidden;
   color: var(--text);
   font-family: "Space Grotesk", sans-serif;
-  background: radial-gradient(circle at 15% 20%, #18344d 0%, transparent 45%),
-    radial-gradient(circle at 80% 15%, #26325f 0%, transparent 40%),
-    linear-gradient(160deg, var(--bg-0), var(--bg-1) 48%, var(--bg-2));
+  background: radial-gradient(circle at 14% 18%, #1e5e6a 0%, transparent 43%),
+    radial-gradient(circle at 82% 12%, #4a3564 0%, transparent 38%),
+    radial-gradient(circle at 58% 82%, #275145 0%, transparent 40%),
+    linear-gradient(160deg, var(--bg-0), var(--bg-1) 50%, var(--bg-2));
 }
 
 .bg-shape {
@@ -48,13 +49,13 @@ body {
 .bg-shape--top {
   top: -15vw;
   left: -10vw;
-  background: #35d4ff;
+  background: #66d8c0;
 }
 
 .bg-shape--bottom {
   bottom: -16vw;
   right: -12vw;
-  background: #ff7a64;
+  background: #ff9a6c;
 }
 
 .container {
