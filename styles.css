@@ -173,37 +173,6 @@ body::after {
   filter: contrast(1.12) saturate(0.78) brightness(0.92);
 }
 
-.company-card {
-  border: 1px solid var(--line);
-  background: linear-gradient(145deg, rgba(30, 17, 11, 0.94), rgba(15, 9, 7, 0.96));
-  padding: 1.4rem;
-  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
-}
-
-.company-grid {
-  margin-top: 0.75rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.8rem;
-}
-
-.company-grid article {
-  border: 1px solid rgba(255, 166, 97, 0.22);
-  background: rgba(255, 182, 122, 0.06);
-  padding: 0.85rem;
-}
-
-.company-grid h3 {
-  margin: 0 0 0.5rem;
-  font-family: "Chakra Petch", sans-serif;
-  font-size: 1.05rem;
-}
-
-.company-grid p {
-  color: var(--text-dim);
-  line-height: 1.5;
-}
-
 .proceed-wrap {
   margin-top: auto;
   padding-top: 1.4rem;
@@ -665,10 +634,6 @@ p {
 
   .company-mark img {
     max-height: 380px;
-  }
-
-  .company-grid {
-    grid-template-columns: 1fr;
   }
 
   .featured {
