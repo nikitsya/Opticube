@@ -103,6 +103,7 @@ body::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.8rem;
   padding: 1.2rem 0;
   border-bottom: 1px solid rgba(255, 156, 76, 0.25);
 }
@@ -118,6 +119,28 @@ body::after {
 .nav {
   display: flex;
   gap: 1rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.future-btn {
+  border: 1px solid var(--line);
+  background: rgba(255, 154, 61, 0.12);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.72rem;
+  cursor: pointer;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%);
+}
+
+.future-btn.is-pulse {
+  box-shadow: 0 0 0 2px rgba(255, 154, 61, 0.35);
 }
 
 .nav a {
@@ -226,6 +249,23 @@ p {
   list-style: none;
   display: grid;
   gap: 0.6rem;
+}
+
+.about-game {
+  margin: 1.1rem 0 2.4rem;
+  border: 1px solid var(--line);
+  background: rgba(22, 13, 9, 0.94);
+  padding: 1.1rem;
+  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
+}
+
+.about-game p {
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+
+.about-game p + p {
+  margin-top: 0.7rem;
 }
 
 .featured-meta li {
@@ -467,6 +507,10 @@ p {
 @media (max-width: 680px) {
   .nav {
     display: none;
+  }
+
+  .header {
+    flex-wrap: wrap;
   }
 
   .hero {
