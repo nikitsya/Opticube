@@ -159,10 +159,6 @@ body::after {
 
 .company-mark {
   margin: 0;
-  border: 1px solid rgba(255, 166, 97, 0.26);
-  background: rgba(20, 11, 8, 0.78);
-  padding: 0.55rem;
-  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
 }
 
 .company-mark img {
