@@ -10,7 +10,7 @@ if (futureBtn) {
 }
 
 const mediaData = {
-  characters: Array.from({ length: 8 }, (_, index) => {
+  characters: Array.from({ length: 7 }, (_, index) => {
     const number = String(index + 1).padStart(2, "0");
     return {
       src: `images/showcase/characters/char-${number}.jpeg`,
