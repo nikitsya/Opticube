@@ -84,6 +84,15 @@ body::after {
   letter-spacing: 0.04em;
 }
 
+.brand-link {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand-link:hover {
+  color: var(--accent);
+}
+
 .nav {
   display: flex;
   gap: 1rem;
