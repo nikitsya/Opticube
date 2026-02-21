@@ -236,11 +236,11 @@ p {
 }
 
 .featured-media {
-  background: linear-gradient(140deg, rgba(20, 10, 7, 0.64), rgba(41, 21, 12, 0.92)),
+  background: linear-gradient(140deg, rgba(20, 10, 7, 0.28), rgba(41, 21, 12, 0.46)),
     url("images/branding/photo_2026-02-21%2021.09.40.jpeg")
-      center/cover no-repeat;
+      center top/cover no-repeat;
   min-height: 280px;
-  filter: contrast(1.22) saturate(0.8) sepia(0.2);
+  filter: contrast(1.05) saturate(0.95) sepia(0.08);
 }
 
 .featured-meta {
