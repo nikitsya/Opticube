@@ -406,73 +406,6 @@ p {
   display: none;
 }
 
-.about-game {
-  margin: 1.1rem 0 2.4rem;
-  border: 1px solid var(--line);
-  background: rgba(22, 13, 9, 0.94);
-  padding: 1.1rem;
-  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
-}
-
-.about-game p {
-  color: var(--text-dim);
-  line-height: 1.55;
-}
-
-.about-game p + p {
-  margin-top: 0.7rem;
-}
-
-.system-req {
-  margin: 1.1rem 0 2.4rem;
-  border: 1px solid var(--line);
-  background: rgba(22, 13, 9, 0.94);
-  padding: 1.1rem;
-  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
-}
-
-.content-warning {
-  margin: 0 0 0.9rem;
-  padding: 0.75rem 0.85rem;
-  border-left: 4px solid #d15555;
-  border: 1px solid rgba(209, 85, 85, 0.42);
-  background: rgba(184, 49, 49, 0.15);
-  color: #ffe4e4;
-  font-weight: 600;
-  line-height: 1.55;
-  box-shadow: inset 0 0 0 1px rgba(255, 120, 120, 0.08);
-}
-
-.system-req h3 {
-  margin: 0 0 0.6rem;
-  font-family: "Chakra Petch", sans-serif;
-  font-size: 1.2rem;
-}
-
-.req-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.9rem;
-  margin-top: 0.8rem;
-}
-
-.req-grid article {
-  border: 1px solid rgba(255, 166, 97, 0.18);
-  background: rgba(255, 182, 122, 0.06);
-  padding: 0.8rem;
-}
-
-.req-grid ul {
-  margin: 0;
-  padding-left: 1.1rem;
-  color: var(--text-dim);
-  line-height: 1.5;
-}
-
-.req-grid li + li {
-  margin-top: 0.35rem;
-}
-
 .featured-meta li {
   display: flex;
   justify-content: space-between;
@@ -742,10 +675,6 @@ p {
   }
 
   .media-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .req-grid {
     grid-template-columns: 1fr;
   }
 
