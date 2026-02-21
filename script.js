@@ -1,4 +1,9 @@
 const futureBtn = document.querySelector(".future-btn");
+const currentYearNode = document.getElementById("current-year");
+
+if (currentYearNode) {
+  currentYearNode.textContent = String(new Date().getFullYear());
+}
 
 if (futureBtn) {
   futureBtn.addEventListener("click", () => {
