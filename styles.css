@@ -1,15 +1,15 @@
 :root {
-  --bg-0: #07111a;
-  --bg-1: #112434;
-  --bg-2: #1e3346;
-  --surface: rgba(9, 21, 35, 0.82);
-  --surface-strong: rgba(15, 31, 49, 0.94);
-  --line: rgba(135, 185, 221, 0.3);
-  --text: #e8f3ff;
-  --text-dim: #adc8de;
-  --accent: #5ce2b7;
-  --accent-2: #ffb84f;
-  --danger: #ff5e7a;
+  --bg-0: #060403;
+  --bg-1: #1a100a;
+  --bg-2: #2b1a11;
+  --surface: rgba(30, 18, 12, 0.82);
+  --surface-strong: rgba(22, 13, 9, 0.94);
+  --line: rgba(214, 137, 73, 0.28);
+  --text: #fff4e8;
+  --text-dim: #d9bda1;
+  --accent: #ff9a3d;
+  --accent-2: #d67b30;
+  --danger: #ff6b4a;
 }
 
 *,
@@ -29,9 +29,9 @@ body {
   overflow-x: hidden;
   color: var(--text);
   font-family: "Space Grotesk", sans-serif;
-  background: radial-gradient(circle at 14% 18%, #1e5e6a 0%, transparent 43%),
-    radial-gradient(circle at 82% 12%, #4a3564 0%, transparent 38%),
-    radial-gradient(circle at 58% 82%, #275145 0%, transparent 40%),
+  background: radial-gradient(circle at 14% 18%, #6b3a18 0%, transparent 44%),
+    radial-gradient(circle at 82% 12%, #4b2d1b 0%, transparent 38%),
+    radial-gradient(circle at 58% 82%, #3a2317 0%, transparent 40%),
     linear-gradient(160deg, var(--bg-0), var(--bg-1) 50%, var(--bg-2));
 }
 
@@ -49,13 +49,13 @@ body {
 .bg-shape--top {
   top: -15vw;
   left: -10vw;
-  background: #66d8c0;
+  background: #ff8a2d;
 }
 
 .bg-shape--bottom {
   bottom: -16vw;
   right: -12vw;
-  background: #ff9a6c;
+  background: #9e5c33;
 }
 
 .container {
@@ -138,8 +138,8 @@ p {
   display: inline-flex;
   margin-top: 1.35rem;
   text-decoration: none;
-  background: linear-gradient(100deg, var(--accent), #6ec8ff);
-  color: #062123;
+  background: linear-gradient(100deg, var(--accent), #c96b2d);
+  color: #25140a;
   font-weight: 700;
   padding: 0.78rem 1.1rem;
   border-radius: 999px;
@@ -148,7 +148,7 @@ p {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(81, 232, 197, 0.22);
+  box-shadow: 0 10px 20px rgba(255, 154, 61, 0.28);
 }
 
 .featured {
@@ -156,7 +156,7 @@ p {
   border: 1px solid var(--line);
   border-radius: 24px;
   overflow: hidden;
-  background: linear-gradient(140deg, rgba(16, 31, 49, 0.93), rgba(7, 18, 31, 0.95));
+  background: linear-gradient(140deg, rgba(34, 20, 13, 0.93), rgba(13, 8, 6, 0.96));
   display: grid;
   grid-template-columns: 1.25fr 1fr;
 }
@@ -171,7 +171,7 @@ p {
 }
 
 .featured-media {
-  background: linear-gradient(140deg, rgba(13, 13, 21, 0.64), rgba(17, 34, 53, 0.92)),
+  background: linear-gradient(140deg, rgba(20, 10, 7, 0.64), rgba(41, 21, 12, 0.92)),
     url("https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3823650/ss_2fdbfa4b3ecf44dc6fc9d74d76c176f28022ef96.1920x1080.jpg")
       center/cover no-repeat;
   min-height: 280px;
@@ -188,8 +188,8 @@ p {
 .featured-meta li {
   display: flex;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 182, 122, 0.06);
+  border: 1px solid rgba(255, 166, 97, 0.18);
   border-radius: 10px;
   padding: 0.62rem 0.8rem;
 }
@@ -243,7 +243,7 @@ p {
 
 .filters button {
   border: 1px solid var(--line);
-  background: rgba(7, 24, 37, 0.75);
+  background: rgba(24, 14, 10, 0.75);
   color: var(--text-dim);
   border-radius: 999px;
   padding: 0.42rem 0.85rem;
@@ -253,9 +253,9 @@ p {
 
 .filters button:hover,
 .filters button.is-active {
-  border-color: rgba(125, 224, 197, 0.5);
+  border-color: rgba(255, 154, 61, 0.56);
   color: var(--text);
-  background: rgba(24, 57, 64, 0.92);
+  background: rgba(52, 28, 16, 0.94);
 }
 
 .games-grid {
@@ -313,17 +313,17 @@ p {
   border-radius: 999px;
   padding: 0.25rem 0.5rem;
   font-size: 0.78rem;
-  border: 1px solid rgba(255, 255, 255, 0.17);
+  border: 1px solid rgba(255, 173, 110, 0.24);
   color: var(--text-dim);
 }
 
 .tag.status-live {
-  border-color: rgba(92, 226, 183, 0.62);
+  border-color: rgba(255, 154, 61, 0.62);
   color: var(--accent);
 }
 
 .tag.status-upcoming {
-  border-color: rgba(255, 184, 79, 0.57);
+  border-color: rgba(214, 123, 48, 0.65);
   color: var(--accent-2);
 }
 
