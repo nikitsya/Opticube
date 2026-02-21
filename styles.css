@@ -251,6 +251,124 @@ p {
   gap: 0.6rem;
 }
 
+.media-hub {
+  margin: 1.1rem 0 2.2rem;
+  border: 1px solid var(--line);
+  background: rgba(22, 13, 9, 0.94);
+  padding: 1.1rem;
+  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
+}
+
+.media-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.8rem;
+}
+
+.media-tabs {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.media-tab {
+  border: 1px solid var(--line);
+  background: rgba(255, 154, 61, 0.08);
+  color: var(--text-dim);
+  font-family: inherit;
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.62rem;
+  cursor: pointer;
+}
+
+.media-tab.is-active {
+  color: var(--text);
+  border-color: rgba(255, 154, 61, 0.72);
+  background: rgba(255, 154, 61, 0.18);
+}
+
+.media-copy {
+  margin-top: 0.6rem;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.media-grid {
+  margin-top: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+}
+
+.media-card {
+  border: 1px solid rgba(255, 166, 97, 0.24);
+  background: rgba(255, 182, 122, 0.05);
+  padding: 0.35rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.media-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 154, 61, 0.75);
+}
+
+.media-card img {
+  display: block;
+  width: 100%;
+  height: 185px;
+  object-fit: cover;
+  filter: contrast(1.17) saturate(0.78) sepia(0.12);
+}
+
+.media-card p {
+  margin: 0.45rem 0 0.2rem;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.88);
+  display: grid;
+  place-items: center;
+  padding: 1.4rem;
+}
+
+.lightbox img {
+  max-width: min(1100px, 94vw);
+  max-height: 84vh;
+  width: auto;
+  height: auto;
+  border: 1px solid rgba(255, 154, 61, 0.45);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 154, 61, 0.14);
+  color: var(--text);
+  padding: 0.45rem 0.65rem;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
 .about-game {
   margin: 1.1rem 0 2.4rem;
   border: 1px solid var(--line);
@@ -544,6 +662,10 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .media-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .stats {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -571,8 +693,17 @@ p {
     align-items: flex-start;
   }
 
+  .media-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .stats,
   .games-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media-grid {
     grid-template-columns: 1fr;
   }
 
