@@ -150,6 +150,31 @@ body::after {
   padding-bottom: 1.2rem;
 }
 
+.company-hero-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.company-mark {
+  margin: 0;
+  border: 1px solid rgba(255, 166, 97, 0.26);
+  background: rgba(20, 11, 8, 0.78);
+  padding: 0.55rem;
+  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
+}
+
+.company-mark img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  object-fit: cover;
+  image-rendering: pixelated;
+  filter: contrast(1.12) saturate(0.78) brightness(0.92);
+}
+
 .company-card {
   border: 1px solid var(--line);
   background: linear-gradient(145deg, rgba(30, 17, 11, 0.94), rgba(15, 9, 7, 0.96));
@@ -631,6 +656,14 @@ p {
 }
 
 @media (max-width: 980px) {
+  .company-hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .company-mark img {
+    max-height: 300px;
+  }
+
   .company-grid {
     grid-template-columns: 1fr;
   }
