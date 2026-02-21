@@ -10,14 +10,13 @@ if (futureBtn) {
 }
 
 const mediaData = {
-  characters: [
-    { src: "images/showcase/characters/char-01.jpeg", label: "Character 01" },
-    { src: "images/showcase/characters/char-02.jpeg", label: "Character 02" },
-    { src: "images/showcase/characters/char-03.jpeg", label: "Character 03" },
-    { src: "images/showcase/characters/char-04.jpeg", label: "Character 04" },
-    { src: "images/showcase/characters/char-05.jpeg", label: "Character 05" },
-    { src: "images/showcase/characters/char-06.jpeg", label: "Boss Variant" },
-  ],
+  characters: Array.from({ length: 8 }, (_, index) => {
+    const number = String(index + 1).padStart(2, "0");
+    return {
+      src: `images/showcase/characters/char-${number}.jpeg`,
+      label: `Character ${number}`,
+    };
+  }),
   weapons: [
     { src: "images/showcase/weapons/weap-01.jpeg", label: "Weapon 01" },
     { src: "images/showcase/weapons/weap-02.jpeg", label: "Weapon 02" },
