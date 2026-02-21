@@ -145,27 +145,29 @@ body::after {
 }
 
 .company-hero {
-  max-width: 860px;
+  max-width: 100%;
   padding-top: 2.8rem;
   padding-bottom: 1.2rem;
 }
 
 .company-hero-layout {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
   align-items: center;
 }
 
 .company-mark {
   margin: 0;
+  width: min(100%, 560px);
+  justify-self: end;
 }
 
 .company-mark img {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 360px;
+  max-height: 520px;
   object-fit: cover;
   image-rendering: pixelated;
   filter: contrast(1.12) saturate(0.78) brightness(0.92);
@@ -656,8 +658,13 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .company-mark {
+    width: min(100%, 520px);
+    justify-self: start;
+  }
+
   .company-mark img {
-    max-height: 300px;
+    max-height: 380px;
   }
 
   .company-grid {
