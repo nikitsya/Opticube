@@ -657,6 +657,20 @@ p {
   flex: 0 0 auto;
 }
 
+.insert-strip {
+  margin: 0.4rem 0 1.3rem;
+  border: 1px solid rgba(255, 166, 97, 0.2);
+  background: #000;
+  padding: 0.28rem;
+}
+
+.insert-strip img {
+  display: block;
+  width: 100%;
+  height: 58px;
+  object-fit: cover;
+}
+
 @media (max-width: 980px) {
   .featured {
     grid-template-columns: 1fr;
