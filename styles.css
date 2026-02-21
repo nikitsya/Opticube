@@ -268,6 +268,19 @@ p {
   margin-top: 0.7rem;
 }
 
+.inserted-strip {
+  margin-top: 1rem;
+  border: 1px solid rgba(255, 166, 97, 0.2);
+  background: #000;
+  padding: 0.35rem;
+}
+
+.inserted-strip img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .system-req {
   margin: 1.1rem 0 2.4rem;
   border: 1px solid var(--line);
