@@ -900,6 +900,8 @@ p {
   text-transform: uppercase;
   color: #cc742e;
   text-align: center;
+  -webkit-text-stroke: 1px rgba(18, 9, 3, 0.98);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.55);
 }
 
 .press-kit-factsheet-title {
