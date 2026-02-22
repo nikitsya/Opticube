@@ -742,6 +742,7 @@ p {
 .press-kit-action-icon {
   width: 1.05rem;
   height: 1.05rem;
+  object-fit: contain;
   fill: currentColor;
   flex: 0 0 auto;
 }
@@ -752,12 +753,13 @@ p {
   color: #eef6ff;
   padding-top: 0.08rem;
   padding-bottom: 0.08rem;
+  border-radius: 999px 0 0 999px;
   box-shadow: 0 0 0 1px rgba(166, 207, 255, 0.22), 0 8px 0 rgba(19, 40, 74, 0.36);
 }
 
 .press-kit-action--steam .press-kit-action-icon {
-  width: 2.95rem;
-  height: 2.95rem;
+  width: 2.65rem;
+  height: 2.65rem;
 }
 
 .press-kit-action--steam:hover {
