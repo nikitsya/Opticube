@@ -286,7 +286,8 @@ p {
   padding-right: 1rem;
 }
 
-.btn-wishlist {
+.btn-wishlist,
+.btn-library {
   background: linear-gradient(100deg, #ffa94a, #f0842b);
   border-color: rgba(73, 36, 14, 0.92);
   box-shadow: 0 0 0 1px rgba(255, 186, 112, 0.2), 0 10px 0 rgba(120, 58, 20, 0.28);
@@ -294,31 +295,21 @@ p {
   padding: 1.05rem 1.6rem;
   min-width: min(100%, 380px);
   justify-content: center;
+  color: #25140a;
+  font-weight: 700;
 }
 
-.btn-wishlist:hover {
+.btn-wishlist:hover,
+.btn-library:hover {
   box-shadow: 0 0 0 1px rgba(255, 197, 132, 0.28), 0 12px 0 rgba(120, 58, 20, 0.36);
+  transform: translateY(-2px);
+  filter: contrast(1.08);
+  background: linear-gradient(100deg, #ffa94a, #f0842b);
+  color: #25140a;
 }
 
 .btn-library {
-  background: rgba(56, 31, 19, 0.58);
-  color: var(--text-dim);
-  border-color: rgba(255, 166, 97, 0.24);
-  clip-path: none;
-  border-radius: 2px;
-  font-size: clamp(0.92rem, 1.9vw, 1.02rem);
-  font-weight: 600;
-  padding: 0.78rem 1.1rem;
   letter-spacing: 0.03em;
-  min-width: min(100%, 250px);
-}
-
-.btn-library:hover {
-  transform: translateY(-1px);
-  box-shadow: none;
-  filter: none;
-  background: rgba(68, 36, 21, 0.76);
-  color: var(--text);
 }
 
 .featured {
