@@ -16,6 +16,15 @@
   --btn-yellow-end: #d8751f;
   --btn-yellow-hover-start: #ffb55a;
   --btn-yellow-hover-end: #e98a2f;
+  --btn-yellow-solid: #e88a2f;
+  --btn-yellow-solid-hover: #f4a043;
+  --btn-olive-solid: #51603a;
+  --btn-olive-solid-hover: #5c6c40;
+  --btn-olive-spotlight-solid: #5b6f3e;
+  --btn-olive-spotlight-hover: #64804a;
+  --btn-red-solid: #853429;
+  --btn-red-solid-hover: #96403a;
+  --btn-red-dark-solid: #572a17;
   --btn-yellow-border: rgba(255, 183, 94, 0.76);
   --btn-yellow-ring: rgba(255, 193, 112, 0.26);
   --btn-yellow-ring-hover: rgba(255, 206, 136, 0.32);
@@ -257,7 +266,7 @@ body::after {
   gap: clamp(0.7rem, 1.5vw, 1rem);
   padding: clamp(1.3rem, 2.5vw, 1.7rem) clamp(1.9rem, 4.8vw, 3rem);
   font-size: clamp(1.3rem, 2.7vw, 1.9rem);
-  background: linear-gradient(100deg, var(--btn-yellow-start), var(--btn-yellow-end));
+  background: var(--btn-yellow-solid);
   border-color: var(--btn-yellow-border);
   color: var(--btn-yellow-text);
   box-shadow: 0 0 0 1px var(--btn-yellow-ring), 0 11px 0 var(--btn-yellow-shadow);
@@ -265,7 +274,7 @@ body::after {
 }
 
 .luckrot-page .btn.btn-steam-page:hover {
-  background: linear-gradient(100deg, var(--btn-yellow-hover-start), var(--btn-yellow-hover-end));
+  background: var(--btn-yellow-solid-hover);
   color: var(--btn-yellow-text);
   box-shadow: 0 0 0 1px var(--btn-yellow-ring-hover), 0 13px 0 var(--btn-yellow-shadow-hover);
 }
@@ -387,7 +396,7 @@ p {
   display: inline-flex;
   margin-top: 1.35rem;
   text-decoration: none;
-  background: linear-gradient(100deg, var(--btn-yellow-start), var(--btn-yellow-end));
+  background: var(--btn-yellow-solid);
   color: var(--btn-yellow-text);
   font-weight: 700;
   padding: 0.78rem 1.1rem;
@@ -410,7 +419,7 @@ p {
 }
 
 .btn-wishlist {
-  background: linear-gradient(100deg, var(--btn-yellow-start), var(--btn-yellow-end));
+  background: var(--btn-yellow-solid);
   border-color: var(--btn-yellow-border);
   box-shadow: 0 0 0 1px var(--btn-yellow-ring), 0 10px 0 var(--btn-yellow-shadow);
   font-size: clamp(1.15rem, 2.5vw, 1.38rem);
@@ -425,12 +434,12 @@ p {
   box-shadow: 0 0 0 1px var(--btn-yellow-ring-hover), 0 12px 0 var(--btn-yellow-shadow-hover);
   transform: translateY(-2px);
   filter: contrast(1.08);
-  background: linear-gradient(100deg, var(--btn-yellow-hover-start), var(--btn-yellow-hover-end));
+  background: var(--btn-yellow-solid-hover);
   color: var(--btn-yellow-text);
 }
 
 .btn-library {
-  background: linear-gradient(100deg, #5f6e41, #435030);
+  background: var(--btn-olive-solid);
   color: #f4edd8;
   border-color: rgba(157, 177, 116, 0.52);
   clip-path: none;
@@ -448,7 +457,7 @@ p {
 .btn-library:hover {
   transform: translateY(-2px);
   filter: contrast(1.05);
-  background: linear-gradient(100deg, #6a7a49, #4d5d37);
+  background: var(--btn-olive-solid-hover);
   color: #fff6e7;
   box-shadow: 0 0 0 1px rgba(189, 210, 147, 0.22), 0 12px 0 rgba(42, 50, 29, 0.38);
 }
@@ -457,7 +466,7 @@ p {
   margin-top: 0;
   width: fit-content;
   max-width: 100%;
-  background: linear-gradient(100deg, #6a7f48, #4b5f34);
+  background: var(--btn-olive-spotlight-solid);
   border-color: rgba(193, 218, 145, 0.58);
   color: #fff4df;
   box-shadow: 0 0 0 1px rgba(193, 218, 145, 0.2), 0 11px 0 rgba(34, 44, 23, 0.34);
@@ -486,20 +495,20 @@ p {
 }
 
 .btn-library-spotlight:hover {
-  background: linear-gradient(100deg, #748b50, #536a3a);
+  background: var(--btn-olive-spotlight-hover);
   color: #fff8ea;
   box-shadow: 0 0 0 1px rgba(211, 234, 164, 0.24), 0 12px 0 rgba(34, 44, 23, 0.38);
 }
 
 .btn-press-kit {
-  background: linear-gradient(100deg, #9a3f35, #6f281f);
+  background: var(--btn-red-solid);
   border-color: rgba(183, 114, 98, 0.74);
   color: #f7e9e2;
   box-shadow: 0 0 0 1px rgba(200, 133, 114, 0.28), 0 11px 0 rgba(55, 24, 19, 0.42);
 }
 
 .btn-press-kit:hover {
-  background: linear-gradient(100deg, #ad4b3f, #7f3127);
+  background: var(--btn-red-solid-hover);
   color: #fff1ea;
   box-shadow: 0 0 0 1px rgba(216, 148, 129, 0.32), 0 12px 0 rgba(55, 24, 19, 0.48);
 }
@@ -830,7 +839,7 @@ p {
 }
 
 .press-kit-action--steam {
-  background: linear-gradient(100deg, var(--btn-yellow-start), var(--btn-yellow-end));
+  background: var(--btn-yellow-solid);
   border-color: var(--btn-yellow-border);
   color: var(--btn-yellow-text);
   padding-top: 0.25rem;
@@ -846,12 +855,12 @@ p {
 
 .press-kit-action--steam:hover {
   color: var(--btn-yellow-text);
-  background: linear-gradient(100deg, var(--btn-yellow-hover-start), var(--btn-yellow-hover-end));
+  background: var(--btn-yellow-solid-hover);
   box-shadow: 0 0 0 1px var(--btn-yellow-ring-hover), 0 9px 0 var(--btn-yellow-shadow-hover);
 }
 
 .press-kit-action--download {
-  background: linear-gradient(100deg, #9a3f35, #6f281f);
+  background: var(--btn-red-solid);
   border-color: rgba(183, 114, 98, 0.74);
   color: #f7e9e2;
   border-radius: 0;
@@ -860,7 +869,7 @@ p {
 
 .press-kit-action--download:hover {
   color: #fff1ea;
-  background: linear-gradient(100deg, #ad4b3f, #7f3127);
+  background: var(--btn-red-solid-hover);
   box-shadow: 0 0 0 1px rgba(216, 148, 129, 0.32), 0 9px 0 rgba(55, 24, 19, 0.48);
 }
 
@@ -1087,7 +1096,7 @@ p {
   width: 2.45rem;
   height: 2.45rem;
   border: 1px solid var(--btn-yellow-border);
-  background: linear-gradient(100deg, var(--btn-yellow-start), var(--btn-yellow-end));
+  background: var(--btn-yellow-solid);
   color: var(--btn-yellow-text);
   font-size: 1.35rem;
   font-weight: 700;
@@ -1107,7 +1116,7 @@ p {
 }
 
 .press-kit-screenshots-arrow:hover {
-  background: linear-gradient(100deg, var(--btn-yellow-hover-start), var(--btn-yellow-hover-end));
+  background: var(--btn-yellow-solid-hover);
   box-shadow: 0 0 0 1px var(--btn-yellow-ring-hover), 0 8px 0 var(--btn-yellow-shadow-hover);
 }
 
@@ -1196,7 +1205,7 @@ p {
 .library-back {
   align-self: start;
   border: 1px solid var(--btn-yellow-border);
-  background: linear-gradient(100deg, var(--btn-yellow-start), var(--btn-yellow-end));
+  background: var(--btn-yellow-solid);
   color: var(--btn-yellow-text);
   text-decoration: none;
   padding: 0.68rem 1.08rem;
@@ -1212,7 +1221,7 @@ p {
 
 .library-back:hover {
   color: var(--btn-yellow-text);
-  background: linear-gradient(100deg, var(--btn-yellow-hover-start), var(--btn-yellow-hover-end));
+  background: var(--btn-yellow-solid-hover);
   box-shadow: 0 0 0 1px var(--btn-yellow-ring-hover), 0 8px 0 var(--btn-yellow-shadow-hover);
 }
 
@@ -1244,7 +1253,7 @@ p {
 
 .media-tab.is-active {
   color: #fff6ea;
-  background: linear-gradient(100deg, rgba(110, 54, 29, 0.9), rgba(63, 29, 17, 0.9));
+  background: var(--btn-red-dark-solid);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.24);
 }
 
