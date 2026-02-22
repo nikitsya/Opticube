@@ -230,7 +230,7 @@ body::after {
 }
 
 .luckrot-steam-entry {
-  margin-top: 0.95rem;
+  margin-top: clamp(2.2rem, 4.6vw, 3.2rem);
   margin-bottom: 0.42rem;
   display: flex;
   justify-content: center;
@@ -1545,7 +1545,7 @@ p {
   }
 
   .luckrot-steam-entry {
-    margin-top: 0.8rem;
+    margin-top: 1.8rem;
     margin-bottom: 0.32rem;
   }
 
