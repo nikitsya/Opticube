@@ -877,25 +877,20 @@ p {
 
 .press-kit-factsheet {
   margin-top: 5rem;
-  border: 1px solid rgba(156, 95, 54, 0.48);
-  background: radial-gradient(120% 90% at 5% 0%, rgba(206, 136, 72, 0.13), transparent 58%),
-    radial-gradient(130% 90% at 100% 100%, rgba(70, 34, 17, 0.28), transparent 62%),
-    linear-gradient(155deg, rgba(30, 17, 10, 0.95), rgba(13, 7, 4, 0.98));
-  padding: clamp(0.92rem, 1.8vw, 1.3rem);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.38), inset 0 0 0 1px rgba(255, 170, 101, 0.08);
+  border: 0;
+  background: url("images/dirty_sheet.png");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.15rem, 3.4vw, 2.2rem);
+  box-shadow: none;
   position: relative;
   z-index: 1;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .press-kit-factsheet::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  border-top: 1px solid rgba(255, 181, 122, 0.2);
-  border-bottom: 1px solid rgba(85, 47, 23, 0.5);
-  opacity: 0.7;
+  content: none;
 }
 
 .press-kit-factsheet > * {
@@ -904,19 +899,19 @@ p {
 }
 
 .press-kit-factsheet-content {
-  margin-top: 0.92rem;
+  margin-top: 0.72rem;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(180px, 25vw, 250px);
+  grid-template-columns: minmax(0, 1fr) clamp(170px, 24vw, 235px);
   align-items: start;
-  gap: 1.15rem;
+  gap: 1rem;
 }
 
 .press-kit-factsheet-main {
   min-width: 0;
-  border: 1px solid rgba(166, 102, 60, 0.42);
-  background: linear-gradient(160deg, rgba(49, 28, 16, 0.66), rgba(26, 14, 8, 0.72));
-  padding: 0.72rem 0.8rem;
-  box-shadow: inset 0 0 0 1px rgba(255, 184, 126, 0.08);
+  border: 0;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
 }
 
 .press-kit-factsheet-title,
@@ -941,34 +936,19 @@ p {
 .press-kit-factsheet-capsule {
   margin: 0;
   width: 100%;
-  max-width: 250px;
+  max-width: 235px;
   justify-self: end;
-  border: 1px solid rgba(171, 104, 56, 0.56);
-  background: linear-gradient(165deg, rgba(45, 26, 14, 0.9), rgba(21, 12, 7, 0.95));
-  padding: 0.42rem;
-  box-shadow: inset 0 0 0 1px rgba(255, 183, 120, 0.08), 0 8px 18px rgba(0, 0, 0, 0.32);
-  transform: rotate(-0.8deg);
+  border: 0;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  transform: none;
   position: relative;
 }
 
 .press-kit-factsheet-capsule::before,
 .press-kit-factsheet-capsule::after {
-  content: "";
-  position: absolute;
-  top: 7px;
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: radial-gradient(circle at 35% 35%, #e5b17b 0%, #a46238 56%, #683b20 100%);
-  box-shadow: 0 0 0 1px rgba(33, 17, 8, 0.65);
-}
-
-.press-kit-factsheet-capsule::before {
-  left: 7px;
-}
-
-.press-kit-factsheet-capsule::after {
-  right: 7px;
+  content: none;
 }
 
 .press-kit-factsheet-capsule img {
@@ -982,23 +962,27 @@ p {
 .press-kit-factsheet-grid {
   margin: 0;
   display: grid;
-  gap: 0.5rem;
+  gap: 0.35rem;
 }
 
 .press-kit-factsheet-item {
   display: grid;
   grid-template-columns: minmax(130px, 176px) minmax(0, 1fr);
   align-items: center;
-  gap: 0.58rem;
-  padding: 0.44rem 0.56rem;
-  border: 1px solid rgba(161, 99, 56, 0.3);
-  border-left: 3px solid rgba(196, 121, 63, 0.58);
-  background: linear-gradient(160deg, rgba(68, 39, 22, 0.34), rgba(34, 19, 11, 0.44));
+  gap: 0.56rem;
+  padding: 0.24rem 0;
+  border: 0;
+  border-bottom: 1px solid rgba(138, 82, 45, 0.42);
+  background: transparent;
+}
+
+.press-kit-factsheet-item:last-child {
+  border-bottom: 0;
 }
 
 .press-kit-factsheet-item dt {
   margin: 0;
-  color: #d89f69;
+  color: #d7a06a;
   font-size: 0.78rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -1007,10 +991,11 @@ p {
 
 .press-kit-factsheet-item dd {
   margin: 0;
-  color: #f4dcc0;
+  color: #f3dbc0;
   font-size: 1rem;
   line-height: 1.28;
   font-weight: 600;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.28);
 }
 
 .press-kit-description {
@@ -1708,8 +1693,8 @@ p {
 
   .press-kit-factsheet-item {
     grid-template-columns: 1fr;
-    gap: 0.2rem;
-    padding: 0.45rem 0.5rem;
+    gap: 0.14rem;
+    padding: 0.3rem 0;
   }
 
   .press-kit-factsheet-content {
@@ -1719,14 +1704,14 @@ p {
   }
 
   .press-kit-factsheet-capsule {
-    width: min(100%, 320px);
-    max-width: 320px;
+    width: min(100%, 235px);
+    max-width: 235px;
     justify-self: center;
     transform: none;
   }
 
   .press-kit-factsheet-main {
-    padding: 0.68rem 0.74rem;
+    padding: 0;
   }
 
   .press-kit-screenshots-arrow {
