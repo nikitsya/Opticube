@@ -172,45 +172,6 @@ body::after {
   filter: contrast(1.14) saturate(0.72) sepia(0.14) brightness(0.92);
 }
 
-.hero-game {
-  max-width: 100%;
-  margin-top: 0.6rem;
-  padding: 1rem 1.1rem;
-  border: 1px solid rgba(255, 166, 97, 0.2);
-  background: linear-gradient(145deg, rgba(21, 12, 9, 0.88), rgba(12, 7, 6, 0.92));
-  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
-}
-
-.hero-game-layout {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 1.4rem;
-  align-items: start;
-}
-
-.hero-game-cta {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
-  min-width: 300px;
-  padding-top: 0.15rem;
-  gap: 0.7rem;
-}
-
-.hero-game-cta .btn-wishlist {
-  margin-top: 0;
-}
-
-.hero-game-cta .btn {
-  min-width: min(100%, 300px);
-}
-
-.hero-game .hero-copy {
-  max-width: 52ch;
-  line-height: 1.35;
-}
-
 .company-home {
   min-height: calc(100vh - 190px);
   display: flex;
@@ -351,6 +312,10 @@ p {
   box-shadow: 0 14px 0 rgba(0, 0, 0, 0.38);
 }
 
+.featured--single {
+  display: block;
+}
+
 .featured > div:first-child {
   padding: 2rem;
 }
@@ -360,20 +325,25 @@ p {
   max-width: 56ch;
 }
 
-.featured-media {
-  background: linear-gradient(140deg, rgba(20, 10, 7, 0.2), rgba(41, 21, 12, 0.34)),
-    url("images/faces/photo_2026-02-21 21.09.32.jpeg") center 88%/contain no-repeat;
-  background-color: #110907;
-  min-height: 300px;
-  filter: contrast(1.08) saturate(0.65) sepia(0.14) brightness(0.92);
-}
-
 .featured-meta {
   margin: 1.2rem 0 0;
   padding: 0;
   list-style: none;
   display: grid;
   gap: 0.6rem;
+}
+
+.featured-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.featured-actions .btn {
+  margin-top: 0;
+  min-width: min(100%, 300px);
+  justify-content: center;
 }
 
 .media-hub {
@@ -724,21 +694,6 @@ p {
 @media (max-width: 980px) {
   .luckrot-top-art img {
     max-height: 170px;
-  }
-
-  .hero-game-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-game-cta {
-    justify-content: flex-start;
-    align-items: flex-start;
-    min-width: 0;
-    padding-top: 0.1rem;
-  }
-
-  .hero-game-cta .btn {
-    min-width: min(100%, 360px);
   }
 
   .company-hero-layout {
