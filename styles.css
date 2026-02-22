@@ -681,7 +681,7 @@ p {
 }
 
 .media-head--library {
-  align-items: end;
+  align-items: start;
 }
 
 .media-head--right {
@@ -797,6 +797,7 @@ p {
 }
 
 .library-back {
+  align-self: start;
   border: 1px solid rgba(73, 36, 14, 0.9);
   background: linear-gradient(100deg, #ffab4e, #ef842d);
   color: #25140a;
