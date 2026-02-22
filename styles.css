@@ -507,7 +507,8 @@ p {
 }
 
 .media-card[data-kind="weapons"] img,
-.media-card[data-kind="characters"] img {
+.media-card[data-kind="characters"] img,
+.media-card[data-kind="bots"] img {
   object-fit: contain;
   image-rendering: auto;
   background: rgba(17, 10, 7, 0.86);

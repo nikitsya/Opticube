@@ -56,6 +56,14 @@ function initMediaHub() {
     "UZI_Screen2.png",
   ];
 
+  const botAssets = [
+    "BombBot.png",
+    "RifleBot.png",
+    "SawBot.png",
+    "ShockBot.png",
+    "ShotgunBot.png",
+  ];
+
   const mediaData = {
     characters: characterAssets.map((filename) => {
       const label = filename.replace("_Body.png", "").replace(/_/g, " ");
@@ -68,6 +76,13 @@ function initMediaHub() {
       const label = filename.replace("_Screen2.png", "").replace(/_/g, " ");
       return {
         src: `images/weapons/${filename}`,
+        label,
+      };
+    }),
+    bots: botAssets.map((filename) => {
+      const label = filename.replace(".png", "").replace(/([a-z])([A-Z])/g, "$1 $2");
+      return {
+        src: `images/bots/${filename}`,
         label,
       };
     }),
