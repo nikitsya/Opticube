@@ -21,17 +21,18 @@
     <div id="header-root"></div>
 
     <main class="container">
-      <section class="hero">
-        <p class="eyebrow">LUCKROT</p>
-        <h1>Visual Library</h1>
-        <a class="btn btn-back" href="luckrot.html">Back to LUCKROT</a>
-      </section>
-
-      <section class="media-hub" id="media">
-        <div class="media-head media-head--right">
-          <div class="media-tabs" role="tablist" aria-label="Gallery tabs">
-            <button type="button" class="media-tab is-active" data-media="characters" role="tab" aria-selected="true">Characters</button>
-            <button type="button" class="media-tab" data-media="weapons" role="tab" aria-selected="false">Weapons</button>
+      <section class="media-hub media-hub--library" id="media">
+        <div class="media-head media-head--library">
+          <div class="library-title-wrap">
+            <p class="eyebrow">LUCKROT</p>
+            <h1 class="library-title">Visual Library</h1>
+          </div>
+          <div class="library-controls">
+            <a class="library-back" href="luckrot.html">Back to LUCKROT</a>
+            <div class="media-tabs" role="tablist" aria-label="Gallery tabs">
+              <button type="button" class="media-tab is-active" data-media="characters" role="tab" aria-selected="true">Characters</button>
+              <button type="button" class="media-tab" data-media="weapons" role="tab" aria-selected="false">Weapons</button>
+            </div>
           </div>
         </div>
         <div class="media-grid" id="media-grid"></div>

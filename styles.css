@@ -390,6 +390,10 @@ p {
   clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
 }
 
+.media-hub--library {
+  margin-top: 1.35rem;
+}
+
 .media-head {
   display: flex;
   justify-content: space-between;
@@ -397,8 +401,49 @@ p {
   gap: 0.8rem;
 }
 
+.media-head--library {
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(255, 166, 97, 0.22);
+  padding-bottom: 0.72rem;
+}
+
 .media-head--right {
   justify-content: flex-end;
+}
+
+.library-title-wrap {
+  display: grid;
+  gap: 0.12rem;
+}
+
+.library-title {
+  margin: 0;
+  font-size: clamp(1.9rem, 4.2vw, 3rem);
+  line-height: 1;
+}
+
+.library-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.library-back {
+  border: 1px solid var(--line);
+  background: rgba(64, 35, 20, 0.72);
+  color: var(--text-dim);
+  text-decoration: none;
+  padding: 0.44rem 0.74rem;
+  font-size: 0.71rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  clip-path: polygon(8px 0, 100% 0, 100% 100%, 8px 100%, 0 50%);
+}
+
+.library-back:hover {
+  color: var(--text);
+  background: rgba(84, 45, 25, 0.8);
 }
 
 .media-tabs {
@@ -783,6 +828,21 @@ p {
   .media-head {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .media-head--library {
+    align-items: stretch;
+  }
+
+  .library-controls {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.42rem;
+  }
+
+  .library-back {
+    width: fit-content;
   }
 
   .stats,
