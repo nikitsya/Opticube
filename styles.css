@@ -236,7 +236,7 @@ body::after {
 }
 
 .luckrot-page {
-  padding-bottom: clamp(3.75rem, 15vh, 8.5rem);
+  padding-bottom: clamp(2.55rem, 9.4vh, 5.6rem);
 }
 
 .company-hero {
@@ -1195,7 +1195,7 @@ p {
   }
 
   .luckrot-page {
-    padding-bottom: clamp(2.5rem, 10vh, 5.5rem);
+    padding-bottom: clamp(1.7rem, 7.2vh, 3.4rem);
   }
 
   .games-head {
