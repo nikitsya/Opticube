@@ -10,6 +10,16 @@
   --text-dim: #d9bda1;
   --accent: #ff9a3d;
   --accent-2: #d67b30;
+  --btn-yellow-start: #f39f3f;
+  --btn-yellow-end: #d8751f;
+  --btn-yellow-hover-start: #ffb55a;
+  --btn-yellow-hover-end: #e98a2f;
+  --btn-yellow-border: rgba(255, 183, 94, 0.76);
+  --btn-yellow-ring: rgba(255, 193, 112, 0.26);
+  --btn-yellow-ring-hover: rgba(255, 206, 136, 0.32);
+  --btn-yellow-shadow: rgba(116, 48, 14, 0.38);
+  --btn-yellow-shadow-hover: rgba(116, 48, 14, 0.46);
+  --btn-yellow-text: #2a1708;
   --danger: #ff6b4a;
   --cut: 14px;
   --gameplay-blur-progress: 0;
@@ -245,17 +255,17 @@ body::after {
   align-items: center;
   gap: 0.55rem;
   padding: 1.12rem 1.35rem;
-  background: linear-gradient(100deg, #f5bf4f, #e69a2c);
-  border-color: rgba(255, 207, 122, 0.72);
-  color: #2a1708;
-  box-shadow: 0 0 0 1px rgba(255, 214, 141, 0.22), 0 9px 0 rgba(120, 65, 21, 0.34);
+  background: linear-gradient(100deg, var(--btn-yellow-start), var(--btn-yellow-end));
+  border-color: var(--btn-yellow-border);
+  color: var(--btn-yellow-text);
+  box-shadow: 0 0 0 1px var(--btn-yellow-ring), 0 9px 0 var(--btn-yellow-shadow);
   letter-spacing: 0.04em;
 }
 
 .luckrot-page .btn.btn-steam-page:hover {
-  background: linear-gradient(100deg, #ffd067, #f0aa3e);
-  color: #2a1708;
-  box-shadow: 0 0 0 1px rgba(255, 223, 161, 0.28), 0 11px 0 rgba(120, 65, 21, 0.42);
+  background: linear-gradient(100deg, var(--btn-yellow-hover-start), var(--btn-yellow-hover-end));
+  color: var(--btn-yellow-text);
+  box-shadow: 0 0 0 1px var(--btn-yellow-ring-hover), 0 11px 0 var(--btn-yellow-shadow-hover);
 }
 
 .btn-steam-page-icon {
@@ -375,19 +385,19 @@ p {
   display: inline-flex;
   margin-top: 1.35rem;
   text-decoration: none;
-  background: linear-gradient(100deg, var(--accent), #c96b2d);
-  color: #25140a;
+  background: linear-gradient(100deg, var(--btn-yellow-start), var(--btn-yellow-end));
+  color: var(--btn-yellow-text);
   font-weight: 700;
   padding: 0.78rem 1.1rem;
   border-radius: 0;
-  border: 1px solid rgba(41, 21, 9, 0.85);
+  border: 1px solid var(--btn-yellow-border);
   clip-path: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 0 rgba(255, 154, 61, 0.16);
+  box-shadow: 0 0 0 1px var(--btn-yellow-ring-hover), 0 12px 0 var(--btn-yellow-shadow-hover);
   filter: contrast(1.08);
 }
 
@@ -398,23 +408,23 @@ p {
 }
 
 .btn-wishlist {
-  background: linear-gradient(100deg, #ffa94a, #f0842b);
-  border-color: rgba(73, 36, 14, 0.92);
-  box-shadow: 0 0 0 1px rgba(255, 186, 112, 0.2), 0 10px 0 rgba(120, 58, 20, 0.28);
+  background: linear-gradient(100deg, var(--btn-yellow-start), var(--btn-yellow-end));
+  border-color: var(--btn-yellow-border);
+  box-shadow: 0 0 0 1px var(--btn-yellow-ring), 0 10px 0 var(--btn-yellow-shadow);
   font-size: clamp(1.15rem, 2.5vw, 1.38rem);
   padding: 1.05rem 1.6rem;
   min-width: min(100%, 380px);
   justify-content: center;
-  color: #25140a;
+  color: var(--btn-yellow-text);
   font-weight: 700;
 }
 
 .btn-wishlist:hover {
-  box-shadow: 0 0 0 1px rgba(255, 197, 132, 0.28), 0 12px 0 rgba(120, 58, 20, 0.36);
+  box-shadow: 0 0 0 1px var(--btn-yellow-ring-hover), 0 12px 0 var(--btn-yellow-shadow-hover);
   transform: translateY(-2px);
   filter: contrast(1.08);
-  background: linear-gradient(100deg, #ffa94a, #f0842b);
-  color: #25140a;
+  background: linear-gradient(100deg, var(--btn-yellow-hover-start), var(--btn-yellow-hover-end));
+  color: var(--btn-yellow-text);
 }
 
 .btn-library {
@@ -808,13 +818,13 @@ p {
 }
 
 .press-kit-action--steam {
-  background: linear-gradient(100deg, #f5bf4f, #e69a2c);
-  border-color: rgba(255, 207, 122, 0.72);
-  color: #2a1708;
+  background: linear-gradient(100deg, var(--btn-yellow-start), var(--btn-yellow-end));
+  border-color: var(--btn-yellow-border);
+  color: var(--btn-yellow-text);
   padding-top: 0.82rem;
   padding-bottom: 0.82rem;
   border-radius: 0;
-  box-shadow: 0 0 0 1px rgba(255, 214, 141, 0.22), 0 8px 0 rgba(120, 65, 21, 0.34);
+  box-shadow: 0 0 0 1px var(--btn-yellow-ring), 0 8px 0 var(--btn-yellow-shadow);
 }
 
 .press-kit-action--steam .press-kit-action-icon {
@@ -823,9 +833,9 @@ p {
 }
 
 .press-kit-action--steam:hover {
-  color: #2a1708;
-  background: linear-gradient(100deg, #ffd067, #f0aa3e);
-  box-shadow: 0 0 0 1px rgba(255, 223, 161, 0.28), 0 9px 0 rgba(120, 65, 21, 0.42);
+  color: var(--btn-yellow-text);
+  background: linear-gradient(100deg, var(--btn-yellow-hover-start), var(--btn-yellow-hover-end));
+  box-shadow: 0 0 0 1px var(--btn-yellow-ring-hover), 0 9px 0 var(--btn-yellow-shadow-hover);
 }
 
 .press-kit-action--download {
@@ -1062,9 +1072,9 @@ p {
 
 .library-back {
   align-self: start;
-  border: 1px solid rgba(73, 36, 14, 0.9);
-  background: linear-gradient(100deg, #ffab4e, #ef842d);
-  color: #25140a;
+  border: 1px solid var(--btn-yellow-border);
+  background: linear-gradient(100deg, var(--btn-yellow-start), var(--btn-yellow-end));
+  color: var(--btn-yellow-text);
   text-decoration: none;
   padding: 0.68rem 1.08rem;
   font-size: 0.84rem;
@@ -1073,14 +1083,14 @@ p {
   letter-spacing: 0.08em;
   clip-path: none;
   border-radius: 0;
-  box-shadow: 0 0 0 1px rgba(255, 186, 112, 0.18), 0 6px 0 rgba(120, 58, 20, 0.24);
+  box-shadow: 0 0 0 1px var(--btn-yellow-ring), 0 6px 0 var(--btn-yellow-shadow);
   white-space: nowrap;
 }
 
 .library-back:hover {
-  color: #25140a;
-  background: linear-gradient(100deg, #ffb55f, #f19042);
-  box-shadow: 0 0 0 1px rgba(255, 197, 132, 0.24), 0 8px 0 rgba(120, 58, 20, 0.3);
+  color: var(--btn-yellow-text);
+  background: linear-gradient(100deg, var(--btn-yellow-hover-start), var(--btn-yellow-hover-end));
+  box-shadow: 0 0 0 1px var(--btn-yellow-ring-hover), 0 8px 0 var(--btn-yellow-shadow-hover);
 }
 
 .media-tabs {
