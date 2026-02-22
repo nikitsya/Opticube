@@ -451,7 +451,7 @@ p {
   display: flex;
   justify-content: stretch;
   min-height: 100%;
-  border-left: 1px solid rgba(255, 166, 97, 0.24);
+  border-left: 0;
   overflow: hidden;
   position: relative;
 }
@@ -939,7 +939,7 @@ p {
   .featured-capsule {
     min-height: clamp(250px, 44vh, 360px);
     border-left: 0;
-    border-top: 1px solid rgba(255, 166, 97, 0.24);
+    border-top: 0;
   }
 
   .featured-capsule img {
