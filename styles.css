@@ -215,6 +215,10 @@ body::after {
   padding-bottom: 1.8rem;
 }
 
+.luckrot-page {
+  padding-bottom: clamp(3.75rem, 15vh, 8.5rem);
+}
+
 .company-hero {
   max-width: 100%;
   padding-top: 2.8rem;
@@ -910,6 +914,10 @@ p {
 
   .hero {
     padding-top: 1.7rem;
+  }
+
+  .luckrot-page {
+    padding-bottom: clamp(2.5rem, 10vh, 5.5rem);
   }
 
   .games-head {
