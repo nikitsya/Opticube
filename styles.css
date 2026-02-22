@@ -772,6 +772,7 @@ p {
   background: linear-gradient(100deg, #ffad51, #f18a35);
   border-color: rgba(86, 43, 17, 0.84);
   color: #25140a;
+  border-radius: 0 999px 999px 0;
   box-shadow: 0 0 0 1px rgba(255, 194, 131, 0.22), 0 8px 0 rgba(118, 58, 22, 0.32);
 }
 
