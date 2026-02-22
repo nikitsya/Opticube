@@ -36,7 +36,7 @@ Official static website for **OptiCube Games** and the **LUCKROT** project.
 
 ### Gameplay Screenshot
 
-![LUCKROT Screenshot](images/screenshots/Screenshot_13.png)
+![LUCKROT Screenshot](images/screenshots/Screenshot_1.png)
 
 ## Tech Stack
 
