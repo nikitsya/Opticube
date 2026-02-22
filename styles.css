@@ -491,7 +491,7 @@ p {
   gap: 1rem;
   min-height: 100%;
   background: linear-gradient(170deg, rgba(36, 20, 13, 0.88), rgba(18, 10, 7, 0.92));
-  border-right: 1px solid rgba(255, 160, 88, 0.18);
+  border-right: 0;
   position: relative;
 }
 
@@ -549,7 +549,7 @@ p {
   border-left: 0;
   overflow: hidden;
   position: relative;
-  background: #0f0906;
+  background: transparent;
 }
 
 .featured-capsule img {
@@ -559,19 +559,14 @@ p {
   max-width: none;
   height: 100%;
   border: 0;
-  background: rgba(16, 9, 6, 0.95);
+  background: transparent;
   object-fit: cover;
   object-position: center top;
   filter: contrast(1.12) saturate(0.88) brightness(0.86);
 }
 
 .featured-capsule::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(90deg, rgba(13, 7, 5, 0.62), transparent 20%),
-    linear-gradient(180deg, rgba(14, 8, 6, 0.08), rgba(14, 8, 6, 0.42));
+  content: none;
 }
 
 .featured-capsule-badges {
