@@ -1084,7 +1084,7 @@ p {
   border: 0;
   background: linear-gradient(160deg, rgba(40, 21, 14, 0.9), rgba(20, 11, 8, 0.94));
   padding: 0.42rem;
-  cursor: pointer;
+  cursor: zoom-in;
   text-align: left;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 9px 18px rgba(0, 0, 0, 0.28);
@@ -1103,6 +1103,7 @@ p {
   image-rendering: pixelated;
   background: rgba(14, 8, 5, 0.92);
   filter: contrast(1.18) saturate(0.72) brightness(0.95);
+  cursor: inherit;
 }
 
 .media-card[data-kind="weapons"] img,
