@@ -1867,9 +1867,20 @@ p {
 }
 
 @media (max-width: 1024px) {
+  html {
+    background-color: #0b0604;
+    background-image: linear-gradient(rgba(9, 4, 3, 0.76), rgba(9, 4, 3, 0.82)),
+      url("images/background.png");
+    background-position: center center, center center;
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: scroll, scroll;
+  }
+
   body {
     background-color: #0b0604;
+    background-image: none;
     background-attachment: scroll, scroll;
-    background-size: cover, cover;
+    background-size: auto, auto;
   }
 }
