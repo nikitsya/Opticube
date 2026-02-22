@@ -310,6 +310,8 @@ p {
   background: linear-gradient(100deg, #5f6e41, #435030);
   color: #f4edd8;
   border-color: rgba(157, 177, 116, 0.52);
+  clip-path: none;
+  border-radius: 2px;
   box-shadow: 0 0 0 1px rgba(170, 190, 128, 0.18), 0 10px 0 rgba(42, 50, 29, 0.3);
   font-size: clamp(1.02rem, 2.1vw, 1.16rem);
   font-weight: 700;
