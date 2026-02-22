@@ -190,8 +190,54 @@ function initMediaHub() {
     renderMedia(activeMedia);
   }
 
-  const screenshotsGrid = document.querySelector(".press-kit-screenshots-grid");
+  const screenshotsSlider = document.querySelector(".press-kit-screenshots-slider");
+  const screenshotsGrid = screenshotsSlider ? screenshotsSlider.querySelector(".press-kit-screenshots-grid") : null;
   if (screenshotsGrid) {
+    const screenshotCards = Array.from(screenshotsGrid.querySelectorAll(".press-kit-screenshot-card"));
+    const prevButton = screenshotsSlider ? screenshotsSlider.querySelector(".press-kit-screenshots-arrow--prev") : null;
+    const nextButton = screenshotsSlider ? screenshotsSlider.querySelector(".press-kit-screenshots-arrow--next") : null;
+    let activeScreenshotIndex = screenshotCards.findIndex((card) => card.classList.contains("is-active"));
+
+    if (activeScreenshotIndex < 0) {
+      activeScreenshotIndex = 0;
+    }
+
+    const setActiveScreenshot = (index) => {
+      if (screenshotCards.length === 0) {
+        return;
+      }
+
+      activeScreenshotIndex = (index + screenshotCards.length) % screenshotCards.length;
+      screenshotCards.forEach((card, cardIndex) => {
+        const isActive = cardIndex === activeScreenshotIndex;
+        card.classList.toggle("is-active", isActive);
+        card.hidden = !isActive;
+      });
+    };
+
+    setActiveScreenshot(activeScreenshotIndex);
+
+    const hasMultipleScreenshots = screenshotCards.length > 1;
+    if (prevButton) {
+      prevButton.hidden = !hasMultipleScreenshots;
+      prevButton.disabled = !hasMultipleScreenshots;
+      if (hasMultipleScreenshots) {
+        prevButton.addEventListener("click", () => {
+          setActiveScreenshot(activeScreenshotIndex - 1);
+        });
+      }
+    }
+
+    if (nextButton) {
+      nextButton.hidden = !hasMultipleScreenshots;
+      nextButton.disabled = !hasMultipleScreenshots;
+      if (hasMultipleScreenshots) {
+        nextButton.addEventListener("click", () => {
+          setActiveScreenshot(activeScreenshotIndex + 1);
+        });
+      }
+    }
+
     screenshotsGrid.addEventListener("click", (event) => {
       const target = event.target;
       if (!(target instanceof HTMLImageElement)) {
