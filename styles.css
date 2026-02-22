@@ -165,7 +165,7 @@ body::after {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 205px;
+  max-height: 188px;
   object-fit: cover;
   object-position: center;
   image-rendering: pixelated;
@@ -174,13 +174,17 @@ body::after {
 
 .hero-game {
   max-width: 100%;
-  padding-top: 1.15rem;
+  margin-top: 0.6rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(255, 166, 97, 0.2);
+  background: linear-gradient(145deg, rgba(21, 12, 9, 0.88), rgba(12, 7, 6, 0.92));
+  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
 }
 
 .hero-game-layout {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 1rem;
+  gap: 1.4rem;
   align-items: start;
 }
 
@@ -189,8 +193,8 @@ body::after {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
-  min-width: 330px;
-  padding-top: 0.45rem;
+  min-width: 300px;
+  padding-top: 0.15rem;
   gap: 0.7rem;
 }
 
@@ -199,7 +203,12 @@ body::after {
 }
 
 .hero-game-cta .btn {
-  min-width: min(100%, 340px);
+  min-width: min(100%, 300px);
+}
+
+.hero-game .hero-copy {
+  max-width: 52ch;
+  line-height: 1.35;
 }
 
 .company-home {
@@ -324,7 +333,7 @@ p {
 }
 
 .btn-library {
-  background: linear-gradient(100deg, #ffd06d, #ff9a3d);
+  background: linear-gradient(100deg, #f4bd5e, #f3973a);
   font-size: clamp(1rem, 2.1vw, 1.15rem);
   padding: 0.9rem 1.3rem;
   letter-spacing: 0.04em;
@@ -352,10 +361,11 @@ p {
 }
 
 .featured-media {
-  background: linear-gradient(140deg, rgba(20, 10, 7, 0.28), rgba(41, 21, 12, 0.46)),
-    url("images/faces/photo_2026-02-21 21.09.32.jpeg") center 78%/cover no-repeat;
-  min-height: 280px;
-  filter: contrast(1.16) saturate(0.72) sepia(0.16) brightness(0.9);
+  background: linear-gradient(140deg, rgba(20, 10, 7, 0.2), rgba(41, 21, 12, 0.34)),
+    url("images/faces/photo_2026-02-21 21.09.32.jpeg") center 88%/contain no-repeat;
+  background-color: #110907;
+  min-height: 300px;
+  filter: contrast(1.08) saturate(0.65) sepia(0.14) brightness(0.92);
 }
 
 .featured-meta {
@@ -725,6 +735,10 @@ p {
     align-items: flex-start;
     min-width: 0;
     padding-top: 0.1rem;
+  }
+
+  .hero-game-cta .btn {
+    min-width: min(100%, 360px);
   }
 
   .company-hero-layout {
