@@ -475,16 +475,16 @@ p {
 }
 
 .btn-press-kit {
-  background: linear-gradient(100deg, #5b94e8, #3a6db8);
-  border-color: rgba(145, 185, 242, 0.62);
-  color: #eef6ff;
-  box-shadow: 0 0 0 1px rgba(168, 204, 255, 0.24), 0 11px 0 rgba(24, 46, 83, 0.4);
+  background: linear-gradient(100deg, #58b977, #3f905e);
+  border-color: rgba(149, 218, 174, 0.62);
+  color: #edfff3;
+  box-shadow: 0 0 0 1px rgba(171, 233, 194, 0.22), 0 11px 0 rgba(20, 66, 40, 0.34);
 }
 
 .btn-press-kit:hover {
-  background: linear-gradient(100deg, #6ca1f0, #4678c2);
-  color: #f7fbff;
-  box-shadow: 0 0 0 1px rgba(188, 219, 255, 0.3), 0 12px 0 rgba(24, 46, 83, 0.48);
+  background: linear-gradient(100deg, #66c786, #4ca16b);
+  color: #f6fff9;
+  box-shadow: 0 0 0 1px rgba(189, 241, 209, 0.28), 0 12px 0 rgba(20, 66, 40, 0.42);
 }
 
 .featured {
