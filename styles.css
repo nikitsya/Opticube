@@ -712,13 +712,14 @@ p {
 }
 
 .media-hub--library {
+  --press-kit-hero-gap-bottom: clamp(6rem, 12vw, 9rem);
   margin-top: 1.1rem;
   border-color: rgba(255, 154, 61, 0.22);
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.32), inset 0 0 0 1px rgba(255, 169, 93, 0.05);
 }
 
 .press-kit-header-image {
-  margin: calc(-1 * var(--media-hub-pad)) calc(-1 * var(--media-hub-pad)) 0.95rem;
+  margin: calc(-1 * var(--media-hub-pad)) calc(-1 * var(--media-hub-pad)) calc(var(--press-kit-hero-gap-bottom) / 2);
   position: relative;
   z-index: 1;
 }
@@ -889,7 +890,7 @@ p {
 }
 
 .press-kit-factsheet {
-  margin-top: clamp(6rem, 12vw, 9rem);
+  margin-top: var(--press-kit-hero-gap-bottom);
   border: 0;
   background: transparent;
   padding: 0;
