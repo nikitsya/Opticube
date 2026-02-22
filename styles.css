@@ -155,7 +155,8 @@ body::after {
   text-transform: uppercase;
   padding: 0.5rem 0.72rem;
   cursor: pointer;
-  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%);
+  clip-path: none;
+  border-radius: 0;
 }
 
 .future-btn.is-pulse {
@@ -327,20 +328,20 @@ p {
   color: #25140a;
   font-weight: 700;
   padding: 0.78rem 1.1rem;
-  border-radius: 2px;
+  border-radius: 0;
   border: 1px solid rgba(41, 21, 9, 0.85);
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%);
+  clip-path: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 .btn:hover {
-  transform: translateY(-2px) skewX(-2deg);
+  transform: translateY(-2px);
   box-shadow: 0 12px 0 rgba(255, 154, 61, 0.16);
   filter: contrast(1.08);
 }
 
 .btn-back {
-  clip-path: polygon(10px 0, 100% 0, 100% 100%, 10px 100%, 0 50%);
+  clip-path: none;
   padding-left: 1.25rem;
   padding-right: 1rem;
 }
@@ -370,7 +371,7 @@ p {
   color: #f4edd8;
   border-color: rgba(157, 177, 116, 0.52);
   clip-path: none;
-  border-radius: 2px;
+  border-radius: 0;
   box-shadow: 0 0 0 1px rgba(170, 190, 128, 0.18), 0 10px 0 rgba(42, 50, 29, 0.3);
   font-size: clamp(0.9rem, 1.35vw, 1rem);
   font-weight: 700;
@@ -727,7 +728,8 @@ p {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  clip-path: polygon(8px 0, 100% 0, 100% 100%, 8px 100%, 0 50%);
+  clip-path: none;
+  border-radius: 0;
   box-shadow: 0 0 0 1px rgba(255, 186, 112, 0.18), 0 6px 0 rgba(120, 58, 20, 0.24);
   white-space: nowrap;
 }
@@ -753,6 +755,7 @@ p {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 0.48rem 0.75rem;
+  border-radius: 0;
   cursor: pointer;
   transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
@@ -865,6 +868,7 @@ p {
   letter-spacing: 0.08em;
   font-family: inherit;
   font-size: 0.72rem;
+  border-radius: 0;
   cursor: pointer;
 }
 
