@@ -149,14 +149,20 @@ body::after {
 
 .hero-game-cta {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
   min-width: 330px;
   padding-top: 0.45rem;
+  gap: 0.7rem;
 }
 
 .hero-game-cta .btn-wishlist {
   margin-top: 0;
+}
+
+.hero-game-cta .btn {
+  min-width: min(100%, 340px);
 }
 
 .company-home {
@@ -272,6 +278,13 @@ p {
   padding: 0.98rem 1.45rem;
   min-width: min(100%, 320px);
   justify-content: center;
+}
+
+.btn-library {
+  background: linear-gradient(100deg, #ffd06d, #ff9a3d);
+  font-size: clamp(1rem, 2.1vw, 1.15rem);
+  padding: 0.9rem 1.3rem;
+  letter-spacing: 0.04em;
 }
 
 .featured {
@@ -659,6 +672,7 @@ p {
 
   .hero-game-cta {
     justify-content: flex-start;
+    align-items: flex-start;
     min-width: 0;
     padding-top: 0.1rem;
   }

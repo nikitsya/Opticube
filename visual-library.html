@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OptiCube Games | Visual Library</title>
+    <meta
+      name="description"
+      content="LUCKROT Visual Library with characters and weapons by OptiCube."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Chakra+Petch:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/jpeg" href="images/favicon.jpeg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="header-root"></div>
+
+    <main class="container">
+      <section class="hero">
+        <p class="eyebrow">Official Visual Library</p>
+        <h1>LUCKROT Media</h1>
+        <p class="hero-copy">
+          Character and weapon assets in one place. Open any image to preview it
+          in full screen.
+        </p>
+        <a class="btn" href="luckrot.html">Back to LUCKROT</a>
+      </section>
+
+      <section class="media-hub" id="media">
+        <div class="media-head">
+          <div>
+            <p class="eyebrow">Visual Library</p>
+            <h2>Characters & Weapons</h2>
+          </div>
+          <div class="media-tabs" role="tablist" aria-label="Gallery tabs">
+            <button type="button" class="media-tab is-active" data-media="characters" role="tab" aria-selected="true">Characters</button>
+            <button type="button" class="media-tab" data-media="weapons" role="tab" aria-selected="false">Weapons</button>
+          </div>
+        </div>
+        <p class="media-copy">
+          Click any image to open full screen.
+        </p>
+        <div class="media-grid" id="media-grid"></div>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" hidden>
+      <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">Close</button>
+      <img id="lightbox-image" alt="Selected gallery image" />
+    </div>
+
+    <div id="footer-root"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
