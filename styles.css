@@ -1075,10 +1075,31 @@ p {
   margin-top: 5rem;
   border: 0;
   background: transparent;
-  padding: 0;
+  padding: 1.15rem 0 1.3rem;
   position: relative;
   z-index: 1;
   text-align: center;
+  border-top: 1px solid rgba(196, 117, 60, 0.55);
+  border-bottom: 1px solid rgba(196, 117, 60, 0.55);
+}
+
+.press-kit-description::before,
+.press-kit-description::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 176, 108, 0.58) 20%, rgba(255, 176, 108, 0.58) 80%, transparent 100%);
+}
+
+.press-kit-description::before {
+  top: 5px;
+}
+
+.press-kit-description::after {
+  bottom: 5px;
 }
 
 .press-kit-description-title {
@@ -1901,6 +1922,10 @@ p {
 
   .press-kit-factsheet-item dd {
     text-align: left;
+  }
+
+  .press-kit-description {
+    padding: 1rem 0 1.1rem;
   }
 
   .press-kit-screenshots-arrow {
