@@ -190,6 +190,23 @@ function initMediaHub() {
     renderMedia(activeMedia);
   }
 
+  const screenshotsGrid = document.querySelector(".press-kit-screenshots-grid");
+  if (screenshotsGrid) {
+    screenshotsGrid.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLImageElement)) {
+        return;
+      }
+
+      const src = target.currentSrc || target.src;
+      if (!src) {
+        return;
+      }
+
+      openLightbox(src, target.alt || "Screenshot");
+    });
+  }
+
   if (lightboxClose) {
     lightboxClose.addEventListener("click", closeLightbox);
   }
