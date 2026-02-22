@@ -196,7 +196,9 @@ function initMediaHub() {
     const screenshotCards = Array.from(screenshotsGrid.querySelectorAll(".press-kit-screenshot-card"));
     const prevButton = screenshotsSlider ? screenshotsSlider.querySelector(".press-kit-screenshots-arrow--prev") : null;
     const nextButton = screenshotsSlider ? screenshotsSlider.querySelector(".press-kit-screenshots-arrow--next") : null;
+    const screenshotsThumbs = document.querySelector(".press-kit-screenshots-thumbs");
     let activeScreenshotIndex = screenshotCards.findIndex((card) => card.classList.contains("is-active"));
+    let screenshotThumbButtons = [];
 
     if (activeScreenshotIndex < 0) {
       activeScreenshotIndex = 0;
@@ -213,7 +215,43 @@ function initMediaHub() {
         card.classList.toggle("is-active", isActive);
         card.hidden = !isActive;
       });
+
+      screenshotThumbButtons.forEach((thumbButton, thumbIndex) => {
+        const isActive = thumbIndex === activeScreenshotIndex;
+        thumbButton.classList.toggle("is-active", isActive);
+        thumbButton.setAttribute("aria-current", isActive ? "true" : "false");
+      });
     };
+
+    if (screenshotsThumbs) {
+      screenshotsThumbs.innerHTML = "";
+      screenshotThumbButtons = screenshotCards
+        .map((card, index) => {
+          const cardImage = card.querySelector("img");
+          if (!(cardImage instanceof HTMLImageElement)) {
+            return null;
+          }
+
+          const thumbButton = document.createElement("button");
+          thumbButton.type = "button";
+          thumbButton.className = "press-kit-screenshots-thumb";
+          thumbButton.setAttribute("aria-label", `Show screenshot ${index + 1}`);
+
+          const thumbImage = document.createElement("img");
+          thumbImage.src = cardImage.currentSrc || cardImage.src;
+          thumbImage.alt = "";
+          thumbImage.loading = "lazy";
+
+          thumbButton.appendChild(thumbImage);
+          thumbButton.addEventListener("click", () => {
+            setActiveScreenshot(index);
+          });
+
+          screenshotsThumbs.appendChild(thumbButton);
+          return thumbButton;
+        })
+        .filter(Boolean);
+    }
 
     setActiveScreenshot(activeScreenshotIndex);
 
