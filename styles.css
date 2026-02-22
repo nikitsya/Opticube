@@ -899,6 +899,7 @@ p {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--btn-yellow-start);
+  text-align: center;
 }
 
 .press-kit-factsheet-title {
