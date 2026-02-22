@@ -1,59 +1,56 @@
-# OptiCube Web Presence
+# OptiCube Website
 
-Official static web presence for **OptiCube Games** with a dedicated product page and full **LUCKROT Press Kit**.
+Official static website for **OptiCube Games** and the **LUCKROT** project.
 
-This repository is designed for direct deployment on static hosting and for fast editorial updates without a build pipeline.
+## Live Website
 
-## Scope
+- Main website: [https://opticubestudio.com](https://opticubestudio.com)
+- LUCKROT page: [https://opticubestudio.com/luckrot.html](https://opticubestudio.com/luckrot.html)
+- Press Kit page: [https://opticubestudio.com/presskit.html](https://opticubestudio.com/presskit.html)
 
-The project currently includes three production-facing pages:
+## What This Project Includes
 
-- `index.html` - company landing entry point
-- `luckrot.html` - primary marketing page for LUCKROT
-- `presskit.html` - press and media resource page for LUCKROT
+- Company landing page
+- LUCKROT game page
+- Press Kit with factsheet, description, trailer, screenshots, and media library
+- Shared header/footer loaded from partials
+- Responsive layout for desktop, tablet, and mobile
 
-## Product Link
+## Screenshots
 
-- Steam page: [LUCKROT on Steam](https://store.steampowered.com/app/3823650/LUCKROT/)
+### Home / Branding
 
-## Core Capabilities
+![OptiCube Branding](images/opticube_games/LOGO_5.png)
 
-- Shared header and footer via partial injection (`partials/header.html`, `partials/footer.html`)
-- Dedicated LUCKROT landing with autoplay gameplay video and featured metadata
-- Press kit with structured sections: `FACTSHEET`, `DESCRIPTION`, `TRAILER`, `SCREENSHOTS`, and `VISUAL LIBRARY`
-- Tabbed visual library views for `Characters`, `Weapons`, and `Bots`
-- Unified lightbox behavior for both visual library assets and press-kit screenshots
-- Responsive layout for desktop and mobile
-- Footer social links (Steam, Instagram, TikTok, X)
+### LUCKROT Header
 
-## Technical Profile
+![LUCKROT Header](images/branding/LibraryLogo_new.png)
 
-- Stack: plain HTML, CSS, vanilla JavaScript
-- Build system: none
-- Package manager: none
-- Runtime requirement: any static HTTP server (required for `fetch` partial loading)
+### Gameplay Screenshot
 
-## Local Development
+![LUCKROT Screenshot](images/screenshots/Screenshot_1.png)
 
-Run from the repository root:
+## Tech Stack
+
+- HTML
+- CSS
+- Vanilla JavaScript
+
+## Local Run
+
+From the repository root:
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Then open:
+Open:
 
 ```text
 http://localhost:8080
 ```
 
-Alternative:
-
-```bash
-npx serve .
-```
-
-## Repository Structure
+## Project Structure
 
 ```text
 .
@@ -68,48 +65,14 @@ npx serve .
 └── images/
 ```
 
-## Content Editing Guide
+## Editing Guide
 
-- Edit `luckrot.html` for product-page copy, metadata, and call-to-action links.
-- Edit `presskit.html` for factsheet data, long-form description, trailer embed, screenshots, and visual library section content.
-- Edit `styles.css` for layout, typography, spacing, and visual theme adjustments.
-- Edit `script.js` for interaction logic (partial loading, tabs, lightbox, and scroll behavior).
-- Edit `partials/header.html` and `partials/footer.html` for global header/footer updates.
-
-## Deployment Notes
-
-- Deploy as a static site (Netlify, Vercel static output, GitHub Pages, S3/CloudFront, Nginx, etc.)
-- Do not open pages directly via `file://` for QA, because partial loading depends on HTTP
-- Preserve relative file structure when publishing
-
-## GitHub Pages Quick Publish
-
-This repository includes a ready-to-use GitHub Actions workflow at:
-
-- `.github/workflows/deploy-pages.yml`
-
-To publish a real public website URL:
-
-1. Push this repository to GitHub and ensure the default branch is `main`.
-2. Open repository settings: `Settings -> Pages`.
-3. Set `Source` to `GitHub Actions`.
-4. Push any commit to `main` (or run the workflow manually from the `Actions` tab).
-5. Wait for the `Deploy static site to GitHub Pages` workflow to finish.
-6. Open your live URL:
-   - `https://<your-github-username>.github.io/<repository-name>/`
-
-Optional custom domain:
-
-1. In `Settings -> Pages`, set `Custom domain`.
-2. Point your domain DNS to GitHub Pages according to GitHub docs.
-
-## Quality Expectations
-
-- Keep all public-facing copy in English
-- Preserve semantic HTML and accessible labels for media and controls
-- Validate responsive behavior after any layout change
-- Verify lightbox behavior after changes to gallery markup
+- Edit `index.html` for company homepage content.
+- Edit `luckrot.html` for game page content and links.
+- Edit `presskit.html` for press kit content.
+- Edit `styles.css` for styling and responsive behavior.
+- Edit `script.js` for interactions and partial loading logic.
 
 ## License
 
-MIT License. See `LICENSE`.
+MIT. See `LICENSE`.
