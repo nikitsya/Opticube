@@ -253,10 +253,20 @@ body::after {
   align-items: center;
 }
 
+.company-hero-layout--solo {
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
 .company-mark {
   margin: 0;
   width: min(100%, 560px);
   justify-self: end;
+}
+
+.company-mark--solo {
+  width: min(100%, 760px);
+  justify-self: center;
 }
 
 .company-mark img {
