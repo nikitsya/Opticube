@@ -834,7 +834,9 @@ p {
 }
 
 .library-page .media-head--library .press-kit-actions {
-  margin-left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
   justify-content: center;
 }
 
