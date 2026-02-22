@@ -761,8 +761,10 @@ p {
 }
 
 .library-title-wrap {
-  display: grid;
-  gap: 0.32rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
 }
 
 .library-title {
@@ -780,15 +782,18 @@ p {
 
 .press-kit-actions {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
   align-items: center;
   gap: 0.55rem;
-  margin-top: 0.14rem;
+  margin-top: 0;
+  margin-left: auto;
 }
 
 .press-kit-action {
   display: inline-flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
@@ -1586,11 +1591,11 @@ p {
   }
 
   .press-kit-actions {
-    width: 100%;
+    width: auto;
   }
 
   .press-kit-action {
-    flex: 1 1 0;
+    flex: 0 0 auto;
   }
 
   .library-back {
