@@ -173,6 +173,22 @@ body::after {
   filter: contrast(1.14) saturate(0.72) sepia(0.14) brightness(0.92);
 }
 
+.luckrot-video {
+  margin-top: 0.7rem;
+  border: 1px solid rgba(255, 166, 97, 0.22);
+  background: rgba(20, 11, 8, 0.94);
+  padding: 0.35rem;
+}
+
+.luckrot-video-player {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  background: rgb(31, 21, 15);
+}
+
 .company-home {
   min-height: calc(100vh - 190px);
   display: flex;
