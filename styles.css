@@ -781,8 +781,9 @@ p {
 
 .press-kit-actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 0.55rem;
   margin-top: 0.14rem;
 }
