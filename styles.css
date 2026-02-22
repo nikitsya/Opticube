@@ -286,8 +286,7 @@ p {
   padding-right: 1rem;
 }
 
-.btn-wishlist,
-.btn-library {
+.btn-wishlist {
   background: linear-gradient(100deg, #ffa94a, #f0842b);
   border-color: rgba(73, 36, 14, 0.92);
   box-shadow: 0 0 0 1px rgba(255, 186, 112, 0.2), 0 10px 0 rgba(120, 58, 20, 0.28);
@@ -299,8 +298,7 @@ p {
   font-weight: 700;
 }
 
-.btn-wishlist:hover,
-.btn-library:hover {
+.btn-wishlist:hover {
   box-shadow: 0 0 0 1px rgba(255, 197, 132, 0.28), 0 12px 0 rgba(120, 58, 20, 0.36);
   transform: translateY(-2px);
   filter: contrast(1.08);
@@ -309,7 +307,24 @@ p {
 }
 
 .btn-library {
+  background: linear-gradient(100deg, #5f6e41, #435030);
+  color: #f4edd8;
+  border-color: rgba(157, 177, 116, 0.52);
+  box-shadow: 0 0 0 1px rgba(170, 190, 128, 0.18), 0 10px 0 rgba(42, 50, 29, 0.3);
+  font-size: clamp(1.02rem, 2.1vw, 1.16rem);
+  font-weight: 700;
+  padding: 1.05rem 1.35rem;
+  min-width: min(100%, 320px);
+  justify-content: center;
   letter-spacing: 0.03em;
+}
+
+.btn-library:hover {
+  transform: translateY(-2px);
+  filter: contrast(1.05);
+  background: linear-gradient(100deg, #6a7a49, #4d5d37);
+  color: #fff6e7;
+  box-shadow: 0 0 0 1px rgba(189, 210, 147, 0.22), 0 12px 0 rgba(42, 50, 29, 0.38);
 }
 
 .featured {
