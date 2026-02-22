@@ -898,7 +898,7 @@ p {
   line-height: 1;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #efbf93;
+  color: var(--btn-yellow-start);
 }
 
 .press-kit-factsheet-title {
