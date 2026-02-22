@@ -352,12 +352,13 @@ p {
   clip-path: none;
   border-radius: 2px;
   box-shadow: 0 0 0 1px rgba(170, 190, 128, 0.18), 0 10px 0 rgba(42, 50, 29, 0.3);
-  font-size: clamp(1.02rem, 2.1vw, 1.16rem);
+  font-size: clamp(0.9rem, 1.35vw, 1rem);
   font-weight: 700;
-  padding: 1.05rem 1.35rem;
-  min-width: min(100%, 320px);
+  padding: 0.72rem 1rem;
+  min-width: 0;
   justify-content: center;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
+  gap: 0.45rem;
 }
 
 .btn-library:hover {
@@ -374,13 +375,19 @@ p {
 
 .btn-library-spotlight {
   margin-top: 0;
-  width: min(100%, 520px);
+  width: fit-content;
+  max-width: 100%;
   background: linear-gradient(100deg, #6a7f48, #4b5f34);
   border-color: rgba(193, 218, 145, 0.58);
   color: #fff4df;
   box-shadow: 0 0 0 1px rgba(193, 218, 145, 0.2), 0 11px 0 rgba(34, 44, 23, 0.34);
-  font-size: clamp(1.05rem, 2vw, 1.22rem);
-  letter-spacing: 0.04em;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  letter-spacing: 0.02em;
+}
+
+.btn-library-icon {
+  font-size: 1.08em;
+  line-height: 1;
 }
 
 .btn-library-spotlight:hover {
