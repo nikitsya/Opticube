@@ -818,10 +818,10 @@ p {
 }
 
 .press-kit-factsheet {
-  margin-top: 1.25rem;
+  margin-top: 1.1rem;
   border: 0;
-  background: linear-gradient(180deg, rgba(123, 178, 255, 0.05), rgba(123, 178, 255, 0));
-  padding: 0.7rem 0 0;
+  background: transparent;
+  padding: 0;
   box-shadow: none;
   position: relative;
   z-index: 1;
@@ -885,11 +885,10 @@ p {
 }
 
 .press-kit-description {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   border: 0;
-  border-top: 1px solid rgba(255, 169, 93, 0.2);
-  background: linear-gradient(180deg, rgba(255, 176, 107, 0.06), rgba(255, 176, 107, 0));
-  padding: 0.95rem 0 0.05rem;
+  background: transparent;
+  padding: 0;
   position: relative;
   z-index: 1;
 }
@@ -918,11 +917,10 @@ p {
 }
 
 .press-kit-trailers {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   border: 0;
-  border-top: 1px solid rgba(123, 178, 255, 0.2);
-  background: linear-gradient(180deg, rgba(123, 178, 255, 0.06), rgba(123, 178, 255, 0));
-  padding: 0.9rem 0 0.05rem;
+  background: transparent;
+  padding: 0;
   position: relative;
   z-index: 1;
 }
@@ -954,11 +952,10 @@ p {
 }
 
 .press-kit-screenshots {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   border: 0;
-  border-top: 1px solid rgba(255, 169, 93, 0.2);
-  background: linear-gradient(180deg, rgba(255, 169, 93, 0.06), rgba(255, 169, 93, 0));
-  padding: 0.9rem 0 0.05rem;
+  background: transparent;
+  padding: 0;
   position: relative;
   z-index: 1;
 }
