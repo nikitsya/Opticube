@@ -16,6 +16,14 @@ Official static website for **OptiCube Games** and the **LUCKROT** project.
 - Shared header/footer loaded from partials
 - Responsive layout for desktop, tablet, and mobile
 
+## Planned Next Pages
+
+- `Future Games` page
+  - The `Future Games` button already exists in the header and will be connected to a dedicated page.
+- `MEDIA DOWNLOAD` page
+  - The `MEDIA DOWNLOAD` button exists on the Press Kit and is currently disabled.
+  - It will be connected to a page where press/media assets can be downloaded.
+
 ## Screenshots
 
 ### Home / Branding
