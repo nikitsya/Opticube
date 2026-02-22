@@ -1,42 +1,94 @@
-# LUCKROT One-Page Showcase
+# OptiCube Web Presence
 
-Single-page marketing website for **LUCKROT** by OptiCube.
+Official static web presence for **OptiCube Games** with a dedicated product page and full **LUCKROT Press Kit**.
 
-Steam page: [LUCKROT on Steam](https://store.steampowered.com/app/3823650/LUCKROT/)
+This repository is designed for direct deployment on static hosting and for fast editorial updates without a build pipeline.
 
-## Preview
+## Scope
 
-![LUCKROT Main Visual](images/branding/photo_2026-02-21%2021.09.34.jpeg)
+The project currently includes three production-facing pages:
 
-## What is on the page
+- `index.html` - company landing entry point
+- `luckrot.html` - primary marketing page for LUCKROT
+- `press-kit.html` - press and media resource page for LUCKROT
 
-- Hero + featured game block focused on one title
-- Header and footer loaded from separate partial files
-- Full "About This Game" section
-- Character and weapon gallery with tab switcher
-- Lightbox image viewer (open image in full screen)
-- System requirements and mature content warning
-- Footer with Steam, Instagram, TikTok, and X links
+## Product Link
 
-## Run locally
+- Steam page: [LUCKROT on Steam](https://store.steampowered.com/app/3823650/LUCKROT/)
 
-Use a local HTTP server so partial loading works:
+## Core Capabilities
+
+- Shared header and footer via partial injection (`partials/header.html`, `partials/footer.html`)
+- Dedicated LUCKROT landing with autoplay gameplay video and featured metadata
+- Press kit with structured sections: `FACTSHEET`, `DESCRIPTION`, `TRAILER`, `SCREENSHOTS`, and `VISUAL LIBRARY`
+- Tabbed visual library views for `Characters`, `Weapons`, and `Bots`
+- Unified lightbox behavior for both visual library assets and press-kit screenshots
+- Responsive layout for desktop and mobile
+- Footer social links (Steam, Instagram, TikTok, X)
+
+## Technical Profile
+
+- Stack: plain HTML, CSS, vanilla JavaScript
+- Build system: none
+- Package manager: none
+- Runtime requirement: any static HTTP server (required for `fetch` partial loading)
+
+## Local Development
+
+Run from the repository root:
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Open `http://localhost:8080`.
+Then open:
 
-## Project structure
+```text
+http://localhost:8080
+```
 
-- `index.html` - page layout and content
-- `styles.css` - theme, layout, responsive rules
-- `script.js` - partial loading, tabs, gallery rendering, lightbox, UI interactions
-- `partials/header.html` - header markup
-- `partials/footer.html` - footer markup
-- `images/` - local visual assets
+Alternative:
+
+```bash
+npx serve .
+```
+
+## Repository Structure
+
+```text
+.
+├── index.html
+├── luckrot.html
+├── press-kit.html
+├── styles.css
+├── script.js
+├── partials/
+│   ├── header.html
+│   └── footer.html
+└── images/
+```
+
+## Content Editing Guide
+
+- Edit `luckrot.html` for product-page copy, metadata, and call-to-action links.
+- Edit `press-kit.html` for factsheet data, long-form description, trailer embed, screenshots, and visual library section content.
+- Edit `styles.css` for layout, typography, spacing, and visual theme adjustments.
+- Edit `script.js` for interaction logic (partial loading, tabs, lightbox, and scroll behavior).
+- Edit `partials/header.html` and `partials/footer.html` for global header/footer updates.
+
+## Deployment Notes
+
+- Deploy as a static site (Netlify, Vercel static output, GitHub Pages, S3/CloudFront, Nginx, etc.)
+- Do not open pages directly via `file://` for QA, because partial loading depends on HTTP
+- Preserve relative file structure when publishing
+
+## Quality Expectations
+
+- Keep all public-facing copy in English
+- Preserve semantic HTML and accessible labels for media and controls
+- Validate responsive behavior after any layout change
+- Verify lightbox behavior after changes to gallery markup
 
 ## License
 
-MIT. See `LICENSE`.
+MIT License. See `LICENSE`.
