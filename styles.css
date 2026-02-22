@@ -249,29 +249,28 @@ body::after {
 
 .luckrot-page .btn.btn-steam-page {
   margin-top: 0;
-  width: fit-content;
-  max-width: 100%;
-  min-width: clamp(220px, 34vw, 320px);
+  width: min(100%, clamp(300px, 44vw, 500px));
   justify-content: center;
   align-items: center;
-  gap: 0.55rem;
-  padding: 1.12rem 1.35rem;
+  gap: clamp(0.7rem, 1.5vw, 1rem);
+  padding: clamp(1.3rem, 2.5vw, 1.7rem) clamp(1.9rem, 4.8vw, 3rem);
+  font-size: clamp(1.3rem, 2.7vw, 1.9rem);
   background: linear-gradient(100deg, var(--btn-yellow-start), var(--btn-yellow-end));
   border-color: var(--btn-yellow-border);
   color: var(--btn-yellow-text);
-  box-shadow: 0 0 0 1px var(--btn-yellow-ring), 0 9px 0 var(--btn-yellow-shadow);
+  box-shadow: 0 0 0 1px var(--btn-yellow-ring), 0 11px 0 var(--btn-yellow-shadow);
   letter-spacing: 0.04em;
 }
 
 .luckrot-page .btn.btn-steam-page:hover {
   background: linear-gradient(100deg, var(--btn-yellow-hover-start), var(--btn-yellow-hover-end));
   color: var(--btn-yellow-text);
-  box-shadow: 0 0 0 1px var(--btn-yellow-ring-hover), 0 11px 0 var(--btn-yellow-shadow-hover);
+  box-shadow: 0 0 0 1px var(--btn-yellow-ring-hover), 0 13px 0 var(--btn-yellow-shadow-hover);
 }
 
 .btn-steam-page-icon {
-  width: 1.35rem;
-  height: 1.35rem;
+  width: clamp(1.65rem, 2.4vw, 2.2rem);
+  height: clamp(1.65rem, 2.4vw, 2.2rem);
   object-fit: contain;
   flex: 0 0 auto;
 }
