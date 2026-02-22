@@ -101,6 +101,26 @@ body::after {
 .header-actions {
   display: flex;
   align-items: center;
+  gap: 0.55rem;
+}
+
+.header-link-btn {
+  border: 1px solid var(--line);
+  background: rgba(255, 154, 61, 0.1);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.72rem;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.header-link-btn:hover {
+  background: rgba(255, 154, 61, 0.2);
+  color: #fff7ef;
 }
 
 .future-btn {
