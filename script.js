@@ -12,6 +12,32 @@ async function loadPartial(path, targetId) {
   target.innerHTML = await response.text();
 }
 
+function initScrollResetOnReload() {
+  const path = window.location.pathname;
+  const isLuckrotPage = path.endsWith("/luckrot.html") || path.endsWith("luckrot.html");
+  if (!isLuckrotPage) {
+    return;
+  }
+
+  const navigationEntry = performance.getEntriesByType("navigation")[0];
+  const isReload = navigationEntry && navigationEntry.type === "reload";
+  if (!isReload) {
+    return;
+  }
+
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  };
+
+  scrollTop();
+  window.requestAnimationFrame(scrollTop);
+  window.addEventListener("load", scrollTop, { once: true });
+}
+
 function initHeaderInteractions() {
   const futureBtn = document.querySelector(".future-btn");
   if (!futureBtn) {
@@ -244,6 +270,8 @@ function initGameplayInactivityBlur() {
 }
 
 async function bootstrap() {
+  initScrollResetOnReload();
+
   try {
     await Promise.all([
       loadPartial("partials/header.html", "header-root"),
