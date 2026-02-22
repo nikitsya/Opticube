@@ -404,7 +404,7 @@ p {
 
 .featured--single {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(240px, 30vw, 360px);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 42%);
   align-items: stretch;
   gap: 0;
   min-height: clamp(420px, 58vh, 620px);
@@ -437,6 +437,7 @@ p {
 .featured-capsule img {
   display: block;
   width: 100%;
+  min-width: 100%;
   max-width: none;
   height: 100%;
   border: 0;
