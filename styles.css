@@ -878,10 +878,7 @@ p {
 .press-kit-factsheet {
   margin-top: 5rem;
   border: 0;
-  background: url("images/dirty_sheet.png");
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background: transparent;
   padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.15rem, 3.4vw, 2.2rem);
   box-shadow: none;
   position: relative;
@@ -890,7 +887,14 @@ p {
 }
 
 .press-kit-factsheet::before {
-  content: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/dirty_sheet.png") center / 100% 100% no-repeat;
+  filter: blur(1.9px) saturate(0.82) contrast(0.9) brightness(0.82);
+  transform: scale(1.01);
+  opacity: 0.95;
+  pointer-events: none;
 }
 
 .press-kit-factsheet > * {
