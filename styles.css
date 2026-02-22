@@ -623,14 +623,9 @@ p {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.13;
-  background: repeating-linear-gradient(
-    -20deg,
-    rgba(255, 200, 155, 0.3) 0,
-    rgba(255, 200, 155, 0.3) 1px,
-    transparent 1px,
-    transparent 8px
-  );
+  opacity: 0.2;
+  background: radial-gradient(circle at 14% 20%, rgba(255, 166, 97, 0.12), transparent 34%),
+    radial-gradient(circle at 85% 78%, rgba(130, 55, 28, 0.2), transparent 42%);
 }
 
 .media-hub::after {
