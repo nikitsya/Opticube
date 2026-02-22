@@ -561,7 +561,7 @@ p {
   border: 0;
   background: rgba(16, 9, 6, 0.95);
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center top;
   filter: contrast(1.12) saturate(0.88) brightness(0.86);
 }
 
@@ -1165,7 +1165,7 @@ p {
   }
 
   .featured-capsule img {
-    object-position: center 22%;
+    object-position: center top;
   }
 
   .featured-capsule-badges {
