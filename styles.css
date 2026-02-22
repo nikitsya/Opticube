@@ -808,7 +808,7 @@ p {
   color: #2a1708;
   padding-top: 0.82rem;
   padding-bottom: 0.82rem;
-  border-radius: 999px 0 0 999px;
+  border-radius: 0;
   box-shadow: 0 0 0 1px rgba(255, 214, 141, 0.22), 0 8px 0 rgba(120, 65, 21, 0.34);
 }
 
@@ -827,7 +827,7 @@ p {
   background: linear-gradient(100deg, #58b977, #3f905e);
   border-color: rgba(149, 218, 174, 0.62);
   color: #edfff3;
-  border-radius: 0 999px 999px 0;
+  border-radius: 0;
   box-shadow: 0 0 0 1px rgba(171, 233, 194, 0.22), 0 8px 0 rgba(20, 66, 40, 0.34);
 }
 
