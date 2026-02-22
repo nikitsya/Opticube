@@ -210,10 +210,9 @@ function initMediaHub() {
 }
 
 function initGameplayInactivityBlur() {
-  const logoSection = document.querySelector(".luckrot-top-art");
   const descriptionSection = document.getElementById("featured");
   const topVideo = document.querySelector(".luckrot-video-player");
-  if (!logoSection || !descriptionSection || !topVideo) {
+  if (!descriptionSection || !topVideo) {
     return;
   }
 
@@ -227,15 +226,14 @@ function initGameplayInactivityBlur() {
   }
 
   function recalculateBlurBounds() {
-    const logoRect = logoSection.getBoundingClientRect();
+    const videoRect = topVideo.getBoundingClientRect();
     const descriptionRect = descriptionSection.getBoundingClientRect();
-    const logoTopScrollY = logoRect.top + window.scrollY;
+    const videoTopScrollY = videoRect.top + window.scrollY;
     const descriptionTopScrollY = descriptionRect.top + window.scrollY;
-
-    // Start blurring when the top of viewport reaches the middle of the logo.
-    blurStartScrollY = logoTopScrollY + logoRect.height * 0.5;
-    // Reach max blur around the point where description reaches middle of viewport.
-    blurEndScrollY = descriptionTopScrollY - window.innerHeight * 0.5;
+    // Start blurring when the top of the viewport reaches the video start.
+    blurStartScrollY = videoTopScrollY;
+    // Reach max blur when the top of the viewport reaches the featured section.
+    blurEndScrollY = descriptionTopScrollY;
     if (blurEndScrollY <= blurStartScrollY) {
       blurEndScrollY = blurStartScrollY + 1;
     }
