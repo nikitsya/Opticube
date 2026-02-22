@@ -3,6 +3,7 @@
   --bg-1: #100805;
   --bg-2: #1f120c;
   --main-solid-dark: #0b0604;
+  --main-solid-raised: #1a100c;
   --surface: rgba(30, 18, 12, 0.82);
   --surface-strong: rgba(22, 13, 9, 0.94);
   --line: rgba(214, 137, 73, 0.28);
@@ -976,12 +977,7 @@ p {
   gap: 1rem;
   padding: clamp(0.95rem, 2.2vw, 1.25rem) clamp(0.95rem, 2vw, 1.2rem);
   border: 1px solid rgba(176, 104, 56, 0.52);
-  background: linear-gradient(
-    90deg,
-    rgba(119, 61, 29, 0.36) 0%,
-    rgba(65, 30, 16, 0.18) 44%,
-    rgba(25, 10, 7, 0.08) 100%
-  );
+  background: var(--main-solid-raised);
 }
 
 .press-kit-factsheet-item dt {
@@ -1366,7 +1362,7 @@ p {
   grid-template-columns: minmax(82px, 108px) minmax(0, 1fr);
   gap: 0.85rem;
   align-items: center;
-  background: linear-gradient(90deg, rgba(255, 170, 94, 0.12), rgba(255, 170, 94, 0.03));
+  background: var(--main-solid-raised);
   border: 1px solid rgba(255, 166, 97, 0.24);
   border-radius: 0;
   padding: 0.58rem 0.76rem;
