@@ -190,14 +190,21 @@ function initGameplayInactivityBlur() {
     return;
   }
 
-  const activeClass = "is-reading-game-description";
   let rafId = null;
+  const progressVar = "--gameplay-blur-progress";
+
+  function clamp(value, min, max) {
+    return Math.min(max, Math.max(min, value));
+  }
 
   function updateBlurState() {
-    const triggerLine = window.innerHeight * 0.72;
+    const viewportHeight = window.innerHeight;
+    const blurStartLine = viewportHeight * 1.05;
+    const blurEndLine = viewportHeight * 0.5;
     const descriptionTop = descriptionSection.getBoundingClientRect().top;
-    const shouldBlur = descriptionTop <= triggerLine;
-    document.body.classList.toggle(activeClass, shouldBlur);
+    const blurRange = blurStartLine - blurEndLine;
+    const progress = clamp((blurStartLine - descriptionTop) / blurRange, 0, 1);
+    document.documentElement.style.setProperty(progressVar, progress.toFixed(3));
   }
 
   function requestBlurStateUpdate() {

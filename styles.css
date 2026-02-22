@@ -12,6 +12,7 @@
   --accent-2: #d67b30;
   --danger: #ff6b4a;
   --cut: 14px;
+  --gameplay-blur-progress: 0;
 }
 
 *,
@@ -170,15 +171,25 @@ body::after {
   object-fit: cover;
   object-position: center;
   image-rendering: pixelated;
-  filter: contrast(1.14) saturate(0.72) sepia(0.14) brightness(0.92);
-  transition: filter 0.28s ease, opacity 0.28s ease;
+  filter: blur(calc(var(--gameplay-blur-progress) * 18px))
+    contrast(calc(1.14 - var(--gameplay-blur-progress) * 0.1))
+    saturate(calc(0.72 - var(--gameplay-blur-progress) * 0.48))
+    sepia(calc(0.14 + var(--gameplay-blur-progress) * 0.04))
+    brightness(calc(0.92 - var(--gameplay-blur-progress) * 0.4));
+  transform: scale(calc(1 + var(--gameplay-blur-progress) * 0.05));
+  opacity: calc(1 - var(--gameplay-blur-progress) * 0.7);
+  transition: filter 0.28s ease, transform 0.28s ease, opacity 0.28s ease;
 }
 
 .luckrot-video {
   margin-top: 0.7rem;
   background: rgba(20, 11, 8, 0.94);
   padding: 0.35rem;
-  transition: opacity 0.28s ease;
+  overflow: hidden;
+  filter: blur(calc(var(--gameplay-blur-progress) * 8px));
+  transform: scale(calc(1 + var(--gameplay-blur-progress) * 0.03));
+  opacity: calc(1 - var(--gameplay-blur-progress) * 0.56);
+  transition: filter 0.28s ease, transform 0.28s ease, opacity 0.28s ease;
 }
 
 .luckrot-video-player {
@@ -188,21 +199,12 @@ body::after {
   max-height: 520px;
   object-fit: cover;
   background: rgb(31, 21, 15);
-  transition: filter 0.28s ease, opacity 0.28s ease;
-}
-
-body.is-reading-game-description .luckrot-top-art img {
-  filter: blur(18px) contrast(1.04) saturate(0.36) brightness(0.52);
-  opacity: 0.32;
-}
-
-body.is-reading-game-description .luckrot-video {
-  opacity: 0.48;
-}
-
-body.is-reading-game-description .luckrot-video-player {
-  filter: blur(20px) saturate(0.24) brightness(0.36);
-  opacity: 0.28;
+  filter: blur(calc(var(--gameplay-blur-progress) * 16px))
+    saturate(calc(1 - var(--gameplay-blur-progress) * 0.82))
+    brightness(calc(1 - var(--gameplay-blur-progress) * 0.62));
+  transform: scale(calc(1 + var(--gameplay-blur-progress) * 0.07));
+  opacity: calc(1 - var(--gameplay-blur-progress) * 0.72);
+  transition: filter 0.28s ease, transform 0.28s ease, opacity 0.28s ease;
 }
 
 .company-home {
