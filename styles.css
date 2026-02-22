@@ -1081,6 +1081,7 @@ p {
   margin: 0.52rem auto 0;
   width: 100%;
   display: flex;
+  justify-content: center;
   gap: 0.26rem;
   overflow-x: auto;
   padding: 0.12rem 0.04rem 0.18rem;
@@ -1679,6 +1680,10 @@ p {
   .press-kit-screenshots-thumb {
     width: 48px;
     height: 28px;
+  }
+
+  .press-kit-screenshots-thumbs {
+    justify-content: flex-start;
   }
 
   .press-kit-actions {
