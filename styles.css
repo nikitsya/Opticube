@@ -232,14 +232,19 @@ body::after {
 .luckrot-steam-entry {
   margin-top: 0.95rem;
   margin-bottom: 0.42rem;
+  display: flex;
+  justify-content: center;
 }
 
 .luckrot-page .btn.btn-steam-page {
   margin-top: 0;
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
+  min-width: clamp(220px, 34vw, 320px);
   justify-content: center;
   align-items: center;
   gap: 0.55rem;
+  padding: 1.12rem 1.35rem;
   background: linear-gradient(100deg, #f5bf4f, #e69a2c);
   border-color: rgba(255, 207, 122, 0.72);
   color: #2a1708;
