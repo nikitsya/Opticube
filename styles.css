@@ -240,8 +240,9 @@ body::after {
 }
 
 .luckrot-steam-entry {
-  margin-top: clamp(2.2rem, 4.6vw, 3.2rem);
-  margin-bottom: 0.42rem;
+  --steam-entry-top-gap: clamp(2.2rem, 4.6vw, 3.2rem);
+  margin-top: var(--steam-entry-top-gap);
+  margin-bottom: calc(var(--steam-entry-top-gap) * 2);
   display: flex;
   justify-content: center;
 }
@@ -1679,8 +1680,7 @@ p {
   }
 
   .luckrot-steam-entry {
-    margin-top: 1.8rem;
-    margin-bottom: 0.32rem;
+    --steam-entry-top-gap: 1.8rem;
   }
 
   .games-head {
