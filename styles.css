@@ -402,7 +402,7 @@ p {
 }
 
 .media-head--library {
-  align-items: flex-start;
+  align-items: flex-end;
   padding-bottom: 0.72rem;
 }
 
