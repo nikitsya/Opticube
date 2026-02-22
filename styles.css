@@ -73,8 +73,28 @@ body::after {
   align-items: center;
   justify-content: space-between;
   gap: 0.8rem;
-  padding: 1.2rem 0;
-  border-bottom: 1px solid rgba(255, 156, 76, 0.25);
+  margin-top: 0.85rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(255, 160, 88, 0.34);
+  background: linear-gradient(145deg, rgba(21, 12, 8, 0.9), rgba(10, 6, 4, 0.92));
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.32), inset 0 0 0 1px rgba(255, 170, 96, 0.08);
+  backdrop-filter: blur(2px);
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 12% 18%, rgba(255, 158, 84, 0.14), transparent 30%),
+    linear-gradient(180deg, rgba(255, 170, 94, 0.06), transparent 34%);
+}
+
+.header > * {
+  position: relative;
+  z-index: 1;
 }
 
 .brand {
