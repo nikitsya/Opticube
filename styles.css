@@ -789,17 +789,17 @@ p {
 }
 
 .press-kit-action--download {
-  background: linear-gradient(100deg, #ffad51, #f18a35);
-  border-color: rgba(86, 43, 17, 0.84);
-  color: #25140a;
+  background: linear-gradient(100deg, #58b977, #3f905e);
+  border-color: rgba(149, 218, 174, 0.62);
+  color: #edfff3;
   border-radius: 0 999px 999px 0;
-  box-shadow: 0 0 0 1px rgba(255, 194, 131, 0.22), 0 8px 0 rgba(118, 58, 22, 0.32);
+  box-shadow: 0 0 0 1px rgba(171, 233, 194, 0.22), 0 8px 0 rgba(20, 66, 40, 0.34);
 }
 
 .press-kit-action--download:hover {
-  color: #25140a;
-  background: linear-gradient(100deg, #ffb866, #f5984a);
-  box-shadow: 0 0 0 1px rgba(255, 208, 158, 0.28), 0 9px 0 rgba(118, 58, 22, 0.4);
+  color: #f6fff9;
+  background: linear-gradient(100deg, #66c786, #4ca16b);
+  box-shadow: 0 0 0 1px rgba(189, 241, 209, 0.28), 0 9px 0 rgba(20, 66, 40, 0.42);
 }
 
 .press-kit-action--disabled,
