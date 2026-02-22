@@ -817,11 +817,23 @@ p {
 
 .press-kit-factsheet {
   margin-top: 1.25rem;
-  border: 0;
-  background: transparent;
-  padding: 0;
+  border: 1px solid rgba(123, 178, 255, 0.28);
+  background: linear-gradient(145deg, rgba(21, 13, 10, 0.88), rgba(12, 8, 7, 0.94));
+  padding: 0.88rem 0.92rem;
+  box-shadow: inset 0 0 0 1px rgba(125, 178, 255, 0.08);
   position: relative;
   z-index: 1;
+}
+
+.press-kit-factsheet-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(170px, 28vw, 250px);
+  align-items: start;
+  gap: 1rem;
+}
+
+.press-kit-factsheet-main {
+  min-width: 0;
 }
 
 .press-kit-factsheet-title {
@@ -832,8 +844,19 @@ p {
   color: #7fb2ff;
 }
 
+.press-kit-factsheet-capsule {
+  margin: 0;
+  width: 100%;
+}
+
+.press-kit-factsheet-capsule img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .press-kit-factsheet-grid {
-  margin: 0.6rem 0 0;
+  margin: 0.72rem 0 0;
   display: grid;
   gap: 0.42rem;
 }
@@ -1366,6 +1389,16 @@ p {
   .press-kit-factsheet-item {
     grid-template-columns: 1fr;
     gap: 0.16rem;
+  }
+
+  .press-kit-factsheet-content {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 0.45rem;
+  }
+
+  .press-kit-factsheet-capsule {
+    width: min(100%, 300px);
   }
 
   .press-kit-actions {
