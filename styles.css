@@ -594,7 +594,7 @@ p {
   padding-top: 0.6rem;
   display: grid;
   gap: 0.7rem;
-  width: min(100%, 460px);
+  width: 100%;
   align-items: stretch;
 }
 
