@@ -1030,7 +1030,7 @@ p {
 .press-kit-screenshots-slider {
   margin-top: 0.72rem;
   position: relative;
-  width: min(100%, 980px);
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1079,7 +1079,7 @@ p {
 
 .press-kit-screenshots-thumbs {
   margin: 0.52rem auto 0;
-  width: min(100%, 980px);
+  width: 100%;
   display: flex;
   gap: 0.26rem;
   overflow-x: auto;
