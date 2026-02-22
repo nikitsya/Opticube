@@ -1791,7 +1791,16 @@ p {
     align-items: stretch;
     justify-content: flex-start;
     margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
     gap: 0.6rem;
+  }
+
+  .library-page .media-head--library .press-kit-actions {
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
   }
 
   .media-head--library .press-kit-action {
@@ -1910,6 +1919,15 @@ p {
   .media-head--library .press-kit-actions {
     width: min(100%, 320px);
     margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+  }
+
+  .library-page .media-head--library .press-kit-actions {
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
   }
 
   .media-head--library .press-kit-action {
