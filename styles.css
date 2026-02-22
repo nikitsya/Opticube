@@ -336,7 +336,7 @@ p {
 
 .featured-media {
   background: linear-gradient(140deg, rgba(20, 10, 7, 0.28), rgba(41, 21, 12, 0.46)),
-    url("images/branding/photo_2026-02-21 21.09.36.jpeg") center top/cover no-repeat;
+    url("images/faces/photo_2026-02-21 21.09.32.jpeg") center 78%/cover no-repeat;
   min-height: 280px;
   filter: contrast(1.16) saturate(0.72) sepia(0.16) brightness(0.9);
 }
