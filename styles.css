@@ -794,8 +794,8 @@ p {
 .press-kit-action {
   display: inline-flex;
   flex: 0 0 auto;
-  width: 240px;
-  min-height: 5rem;
+  width: 208px;
+  min-height: 4.1rem;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
@@ -804,7 +804,7 @@ p {
   letter-spacing: 0.08em;
   font-size: 1.02rem;
   font-weight: 700;
-  padding: 1.32rem 1.15rem;
+  padding: 1rem 0.95rem;
   border: 1px solid transparent;
   border-radius: 0;
   clip-path: none;
