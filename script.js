@@ -36,6 +36,16 @@ function initFooterYear() {
 }
 
 function initMediaHub() {
+  const characterAssets = [
+    "Fodder_Body.png",
+    "Flyer_Body.png",
+    "Giant_Body.png",
+    "Pakman_Body.png",
+    "Pullerman_Body.png",
+    "Rager_Body.png",
+    "Sniper_Body.png",
+  ];
+
   const weaponAssets = [
     "AK_Screen2.png",
     "Burst_Screen2.png",
@@ -47,11 +57,11 @@ function initMediaHub() {
   ];
 
   const mediaData = {
-    characters: Array.from({ length: 7 }, (_, index) => {
-      const number = String(index + 1).padStart(2, "0");
+    characters: characterAssets.map((filename) => {
+      const label = filename.replace("_Body.png", "").replace(/_/g, " ");
       return {
-        src: `images/showcase/characters/char-${number}.jpeg`,
-        label: `Character ${number}`,
+        src: `images/characters/${filename}`,
+        label,
       };
     }),
     weapons: weaponAssets.map((filename) => {

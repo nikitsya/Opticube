@@ -506,7 +506,8 @@ p {
   filter: contrast(1.24) saturate(0.62) sepia(0.2);
 }
 
-.media-card[data-kind="weapons"] img {
+.media-card[data-kind="weapons"] img,
+.media-card[data-kind="characters"] img {
   object-fit: contain;
   image-rendering: auto;
   background: rgba(17, 10, 7, 0.86);
