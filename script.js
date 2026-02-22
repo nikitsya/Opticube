@@ -184,26 +184,40 @@ function initMediaHub() {
 }
 
 function initGameplayInactivityBlur() {
+  const logoSection = document.querySelector(".luckrot-top-art");
   const descriptionSection = document.getElementById("featured");
   const topVideo = document.querySelector(".luckrot-video-player");
-  if (!descriptionSection || !topVideo) {
+  if (!logoSection || !descriptionSection || !topVideo) {
     return;
   }
 
   let rafId = null;
   const progressVar = "--gameplay-blur-progress";
+  let blurStartScrollY = 0;
+  let blurEndScrollY = 1;
 
   function clamp(value, min, max) {
     return Math.min(max, Math.max(min, value));
   }
 
+  function recalculateBlurBounds() {
+    const logoRect = logoSection.getBoundingClientRect();
+    const descriptionRect = descriptionSection.getBoundingClientRect();
+    const logoTopScrollY = logoRect.top + window.scrollY;
+    const descriptionTopScrollY = descriptionRect.top + window.scrollY;
+
+    // Start blurring when the top of viewport reaches the middle of the logo.
+    blurStartScrollY = logoTopScrollY + logoRect.height * 0.5;
+    // Reach max blur around the point where description reaches middle of viewport.
+    blurEndScrollY = descriptionTopScrollY - window.innerHeight * 0.5;
+    if (blurEndScrollY <= blurStartScrollY) {
+      blurEndScrollY = blurStartScrollY + 1;
+    }
+  }
+
   function updateBlurState() {
-    const viewportHeight = window.innerHeight;
-    const blurStartLine = viewportHeight * 1.05;
-    const blurEndLine = viewportHeight * 0.5;
-    const descriptionTop = descriptionSection.getBoundingClientRect().top;
-    const blurRange = blurStartLine - blurEndLine;
-    const progress = clamp((blurStartLine - descriptionTop) / blurRange, 0, 1);
+    const blurRange = blurEndScrollY - blurStartScrollY;
+    const progress = clamp((window.scrollY - blurStartScrollY) / blurRange, 0, 1);
     document.documentElement.style.setProperty(progressVar, progress.toFixed(3));
   }
 
@@ -218,9 +232,15 @@ function initGameplayInactivityBlur() {
     });
   }
 
+  function handleResize() {
+    recalculateBlurBounds();
+    requestBlurStateUpdate();
+  }
+
+  recalculateBlurBounds();
   updateBlurState();
   window.addEventListener("scroll", requestBlurStateUpdate, { passive: true });
-  window.addEventListener("resize", requestBlurStateUpdate);
+  window.addEventListener("resize", handleResize);
 }
 
 async function bootstrap() {
