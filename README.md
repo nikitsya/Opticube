@@ -10,7 +10,7 @@ The project currently includes three production-facing pages:
 
 - `index.html` - company landing entry point
 - `luckrot.html` - primary marketing page for LUCKROT
-- `press-kit.html` - press and media resource page for LUCKROT
+- `presskit.html` - press and media resource page for LUCKROT
 
 ## Product Link
 
@@ -59,7 +59,7 @@ npx serve .
 .
 ├── index.html
 ├── luckrot.html
-├── press-kit.html
+├── presskit.html
 ├── styles.css
 ├── script.js
 ├── partials/
@@ -71,7 +71,7 @@ npx serve .
 ## Content Editing Guide
 
 - Edit `luckrot.html` for product-page copy, metadata, and call-to-action links.
-- Edit `press-kit.html` for factsheet data, long-form description, trailer embed, screenshots, and visual library section content.
+- Edit `presskit.html` for factsheet data, long-form description, trailer embed, screenshots, and visual library section content.
 - Edit `styles.css` for layout, typography, spacing, and visual theme adjustments.
 - Edit `script.js` for interaction logic (partial loading, tabs, lightbox, and scroll behavior).
 - Edit `partials/header.html` and `partials/footer.html` for global header/footer updates.
