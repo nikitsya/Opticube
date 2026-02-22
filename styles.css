@@ -350,9 +350,9 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0;
   width: 100%;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .featured-actions .btn {
@@ -362,7 +362,7 @@ p {
 }
 
 .featured-actions .btn-wishlist {
-  margin-left: auto;
+  margin-left: 0;
 }
 
 .media-hub {
