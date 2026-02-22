@@ -1865,3 +1865,11 @@ p {
     gap: 0.4rem;
   }
 }
+
+@media (max-width: 1024px) {
+  body {
+    background-color: #0b0604;
+    background-attachment: scroll, scroll;
+    background-size: cover, cover;
+  }
+}
