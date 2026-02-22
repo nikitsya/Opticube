@@ -490,16 +490,16 @@ p {
 }
 
 .btn-press-kit {
-  background: linear-gradient(100deg, #58b977, #3f905e);
-  border-color: rgba(149, 218, 174, 0.62);
-  color: #edfff3;
-  box-shadow: 0 0 0 1px rgba(171, 233, 194, 0.22), 0 11px 0 rgba(20, 66, 40, 0.34);
+  background: linear-gradient(100deg, #9a3f35, #6f281f);
+  border-color: rgba(183, 114, 98, 0.74);
+  color: #f7e9e2;
+  box-shadow: 0 0 0 1px rgba(200, 133, 114, 0.28), 0 11px 0 rgba(55, 24, 19, 0.42);
 }
 
 .btn-press-kit:hover {
-  background: linear-gradient(100deg, #66c786, #4ca16b);
-  color: #f6fff9;
-  box-shadow: 0 0 0 1px rgba(189, 241, 209, 0.28), 0 12px 0 rgba(20, 66, 40, 0.42);
+  background: linear-gradient(100deg, #ad4b3f, #7f3127);
+  color: #fff1ea;
+  box-shadow: 0 0 0 1px rgba(216, 148, 129, 0.32), 0 12px 0 rgba(55, 24, 19, 0.48);
 }
 
 .featured {
