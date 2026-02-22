@@ -879,6 +879,7 @@ p {
 }
 
 .press-kit-factsheet-content {
+  margin-top: 0.72rem;
   display: grid;
   grid-template-columns: minmax(0, 1fr) clamp(170px, 28vw, 250px);
   align-items: start;
@@ -920,7 +921,7 @@ p {
 }
 
 .press-kit-factsheet-grid {
-  margin: 0.72rem 0 0;
+  margin: 0;
   display: grid;
   gap: 0.72rem;
 }
