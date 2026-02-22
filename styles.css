@@ -699,6 +699,7 @@ p {
 
 .media-head--library {
   align-items: start;
+  border-bottom: 0;
 }
 
 .media-head--right {
@@ -815,19 +816,20 @@ p {
 }
 
 .press-kit-factsheet {
-  margin-top: 0.95rem;
-  border: 1px solid rgba(255, 169, 93, 0.24);
-  background: linear-gradient(145deg, rgba(33, 18, 12, 0.82), rgba(17, 9, 7, 0.9));
-  padding: 0.85rem 0.9rem;
+  margin-top: 1.25rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
   position: relative;
   z-index: 1;
 }
 
 .press-kit-factsheet-title {
   margin: 0;
-  font-size: clamp(1.05rem, 2.1vw, 1.28rem);
+  font-size: clamp(1.28rem, 2.8vw, 1.72rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  color: #7fb2ff;
 }
 
 .press-kit-factsheet-grid {
