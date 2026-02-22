@@ -794,7 +794,7 @@ p {
 .press-kit-action {
   display: inline-flex;
   flex: 0 0 auto;
-  width: 184px;
+  width: 216px;
   min-height: 3.6rem;
   align-items: center;
   justify-content: center;
@@ -829,15 +829,15 @@ p {
   background: linear-gradient(100deg, var(--btn-yellow-start), var(--btn-yellow-end));
   border-color: var(--btn-yellow-border);
   color: var(--btn-yellow-text);
-  padding-top: 0.82rem;
-  padding-bottom: 0.82rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   border-radius: 0;
   box-shadow: 0 0 0 1px var(--btn-yellow-ring), 0 8px 0 var(--btn-yellow-shadow);
 }
 
 .press-kit-action--steam .press-kit-action-icon {
-  width: 1.05rem;
-  height: 1.05rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .press-kit-action--steam:hover {
