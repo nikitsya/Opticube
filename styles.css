@@ -386,8 +386,23 @@ p {
 }
 
 .btn-library-icon {
-  font-size: 1.08em;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 0;
+  background: transparent;
+}
+
+.btn-library-icon svg {
+  width: 0.88rem;
+  height: 0.88rem;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
 }
 
 .btn-library-spotlight:hover {
