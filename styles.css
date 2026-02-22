@@ -1592,6 +1592,48 @@ p {
   flex: 0 0 auto;
 }
 
+:is(
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  a[class*="btn"],
+  button[class*="btn"],
+  .btn,
+  .press-kit-action,
+  .press-kit-screenshots-arrow,
+  .media-tab,
+  .filters button,
+  .lightbox-close,
+  .future-btn,
+  .header-link-btn
+) {
+  border-radius: 0;
+  clip-path: none;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+:is(
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  a[class*="btn"],
+  button[class*="btn"],
+  .btn,
+  .press-kit-action,
+  .press-kit-screenshots-arrow,
+  .media-tab,
+  .filters button,
+  .lightbox-close,
+  .future-btn,
+  .header-link-btn
+):is(:hover, :focus-visible, :active, :disabled, .is-active, .is-pulse) {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
 @media (max-width: 980px) {
   .luckrot-top-art img {
     max-height: 170px;
