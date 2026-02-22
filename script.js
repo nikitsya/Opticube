@@ -36,6 +36,16 @@ function initFooterYear() {
 }
 
 function initMediaHub() {
+  const weaponAssets = [
+    "AK_Screen2.png",
+    "Burst_Screen2.png",
+    "Pistol_Screen2.png",
+    "Rifle_Screen2.png",
+    "Shotgun_Screen2.png",
+    "Sword_Screen2.png",
+    "UZI_Screen2.png",
+  ];
+
   const mediaData = {
     characters: Array.from({ length: 7 }, (_, index) => {
       const number = String(index + 1).padStart(2, "0");
@@ -44,14 +54,13 @@ function initMediaHub() {
         label: `Character ${number}`,
       };
     }),
-    weapons: [
-      { src: "images/showcase/weapons/weap-01.jpeg", label: "Weapon 01" },
-      { src: "images/showcase/weapons/weap-02.jpeg", label: "Weapon 02" },
-      { src: "images/showcase/weapons/weap-03.jpeg", label: "Weapon 03" },
-      { src: "images/showcase/weapons/weap-04.jpeg", label: "Weapon 04" },
-      { src: "images/showcase/weapons/weap-05.jpeg", label: "Weapon 05" },
-      { src: "images/showcase/weapons/weap-06.jpeg", label: "Weapon 06" },
-    ],
+    weapons: weaponAssets.map((filename) => {
+      const label = filename.replace("_Screen2.png", "").replace(/_/g, " ");
+      return {
+        src: `images/weapons/${filename}`,
+        label,
+      };
+    }),
   };
 
   const mediaGrid = document.getElementById("media-grid");
@@ -92,6 +101,7 @@ function initMediaHub() {
       const card = document.createElement("button");
       card.type = "button";
       card.className = "media-card";
+      card.dataset.kind = kind;
 
       const image = document.createElement("img");
       image.src = item.src;

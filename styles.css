@@ -506,6 +506,13 @@ p {
   filter: contrast(1.24) saturate(0.62) sepia(0.2);
 }
 
+.media-card[data-kind="weapons"] img {
+  object-fit: contain;
+  image-rendering: auto;
+  background: rgba(17, 10, 7, 0.86);
+  filter: contrast(1.06) saturate(0.88);
+}
+
 .media-card p {
   margin: 0.45rem 0 0.2rem;
   color: var(--text-dim);
