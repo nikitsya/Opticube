@@ -889,7 +889,7 @@ p {
 }
 
 .press-kit-factsheet {
-  margin-top: 3.3rem;
+  margin-top: clamp(6rem, 12vw, 9rem);
   border: 0;
   background: transparent;
   padding: 0;
@@ -1015,6 +1015,7 @@ p {
   padding: 0;
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 .press-kit-description-title {
@@ -1030,10 +1031,11 @@ p {
 }
 
 .press-kit-description p {
-  margin: 0.66rem 0 0;
+  margin: 0.66rem auto 0;
   color: #f4e4d1;
   line-height: 1.58;
   font-size: 0.92rem;
+  max-width: 78ch;
 }
 
 .press-kit-trailers {
