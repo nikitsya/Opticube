@@ -293,6 +293,12 @@ p {
   filter: contrast(1.08);
 }
 
+.btn-back {
+  clip-path: polygon(10px 0, 100% 0, 100% 100%, 10px 100%, 0 50%);
+  padding-left: 1.25rem;
+  padding-right: 1rem;
+}
+
 .btn-wishlist {
   font-size: clamp(1rem, 2.2vw, 1.25rem);
   padding: 0.98rem 1.45rem;
