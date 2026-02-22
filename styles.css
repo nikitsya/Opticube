@@ -136,6 +136,29 @@ body::after {
   max-width: 760px;
 }
 
+.hero-game {
+  max-width: 100%;
+}
+
+.hero-game-layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: start;
+}
+
+.hero-game-cta {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-width: 330px;
+  padding-top: 0.45rem;
+}
+
+.hero-game-cta .btn-wishlist {
+  margin-top: 0;
+}
+
 .company-home {
   min-height: calc(100vh - 190px);
   display: flex;
@@ -630,6 +653,16 @@ p {
 }
 
 @media (max-width: 980px) {
+  .hero-game-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-game-cta {
+    justify-content: flex-start;
+    min-width: 0;
+    padding-top: 0.1rem;
+  }
+
   .company-hero-layout {
     grid-template-columns: 1fr;
   }
