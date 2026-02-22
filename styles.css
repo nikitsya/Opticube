@@ -810,7 +810,7 @@ p {
 }
 
 .library-controls {
-  margin-top: 0.9rem;
+  margin-top: 1.6rem;
   display: grid;
   gap: 0.52rem;
   position: relative;
@@ -818,7 +818,7 @@ p {
 }
 
 .press-kit-factsheet {
-  margin-top: 1.1rem;
+  margin-top: 1.8rem;
   border: 0;
   background: transparent;
   padding: 0;
@@ -885,7 +885,7 @@ p {
 }
 
 .press-kit-description {
-  margin-top: 1.5rem;
+  margin-top: 2.2rem;
   border: 0;
   background: transparent;
   padding: 0;
@@ -917,7 +917,7 @@ p {
 }
 
 .press-kit-trailers {
-  margin-top: 1.5rem;
+  margin-top: 2.2rem;
   border: 0;
   background: transparent;
   padding: 0;
@@ -952,7 +952,7 @@ p {
 }
 
 .press-kit-screenshots {
-  margin-top: 1.5rem;
+  margin-top: 2.2rem;
   border: 0;
   background: transparent;
   padding: 0;
