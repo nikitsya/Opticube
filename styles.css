@@ -882,6 +882,38 @@ p {
   font-size: 0.84rem;
 }
 
+.press-kit-description {
+  margin-top: 1rem;
+  border: 1px solid rgba(255, 169, 93, 0.24);
+  background: linear-gradient(145deg, rgba(28, 16, 12, 0.88), rgba(14, 8, 7, 0.95));
+  padding: 0.95rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.press-kit-description-title {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.3vw, 1.45rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffd39f;
+}
+
+.press-kit-description-lead {
+  margin: 0.48rem 0 0;
+  color: #ffe6c9;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+}
+
+.press-kit-description p {
+  margin: 0.66rem 0 0;
+  color: #f4e4d1;
+  line-height: 1.58;
+  font-size: 0.92rem;
+}
+
 .library-controls-label {
   margin: 0;
   color: #efbf92;
