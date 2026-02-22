@@ -219,6 +219,7 @@ body::after {
   height: auto;
   max-height: none;
   object-fit: contain;
+  pointer-events: none;
   background: rgb(31, 21, 15);
   filter: blur(calc(var(--gameplay-blur-progress) * 16px))
     saturate(calc(1 - var(--gameplay-blur-progress) * 0.82))
