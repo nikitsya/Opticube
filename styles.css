@@ -668,6 +668,8 @@ p {
 
 .media-hub--library {
   margin-top: 1.1rem;
+  border-color: rgba(255, 154, 61, 0.22);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.32), inset 0 0 0 1px rgba(255, 169, 93, 0.05);
 }
 
 .press-kit-header-image {
@@ -817,10 +819,10 @@ p {
 
 .press-kit-factsheet {
   margin-top: 1.25rem;
-  border: 1px solid rgba(123, 178, 255, 0.28);
-  background: linear-gradient(145deg, rgba(21, 13, 10, 0.88), rgba(12, 8, 7, 0.94));
-  padding: 0.88rem 0.92rem;
-  box-shadow: inset 0 0 0 1px rgba(125, 178, 255, 0.08);
+  border: 0;
+  background: linear-gradient(180deg, rgba(123, 178, 255, 0.05), rgba(123, 178, 255, 0));
+  padding: 0.7rem 0 0;
+  box-shadow: none;
   position: relative;
   z-index: 1;
 }
@@ -884,9 +886,10 @@ p {
 
 .press-kit-description {
   margin-top: 1rem;
-  border: 1px solid rgba(255, 169, 93, 0.24);
-  background: linear-gradient(145deg, rgba(28, 16, 12, 0.88), rgba(14, 8, 7, 0.95));
-  padding: 0.95rem 1rem;
+  border: 0;
+  border-top: 1px solid rgba(255, 169, 93, 0.2);
+  background: linear-gradient(180deg, rgba(255, 176, 107, 0.06), rgba(255, 176, 107, 0));
+  padding: 0.95rem 0 0.05rem;
   position: relative;
   z-index: 1;
 }
@@ -916,9 +919,10 @@ p {
 
 .press-kit-trailers {
   margin-top: 1rem;
-  border: 1px solid rgba(123, 178, 255, 0.24);
-  background: linear-gradient(145deg, rgba(18, 12, 10, 0.9), rgba(11, 8, 8, 0.96));
-  padding: 0.9rem;
+  border: 0;
+  border-top: 1px solid rgba(123, 178, 255, 0.2);
+  background: linear-gradient(180deg, rgba(123, 178, 255, 0.06), rgba(123, 178, 255, 0));
+  padding: 0.9rem 0 0.05rem;
   position: relative;
   z-index: 1;
 }
@@ -936,8 +940,9 @@ p {
   position: relative;
   width: 100%;
   padding-top: 56.25%;
-  border: 1px solid rgba(120, 169, 240, 0.36);
+  border: 0;
   background: #050506;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.38);
 }
 
 .press-kit-trailer-frame iframe {
@@ -950,9 +955,10 @@ p {
 
 .press-kit-screenshots {
   margin-top: 1rem;
-  border: 1px solid rgba(255, 169, 93, 0.24);
-  background: linear-gradient(145deg, rgba(21, 13, 10, 0.88), rgba(12, 8, 7, 0.94));
-  padding: 0.9rem;
+  border: 0;
+  border-top: 1px solid rgba(255, 169, 93, 0.2);
+  background: linear-gradient(180deg, rgba(255, 169, 93, 0.06), rgba(255, 169, 93, 0));
+  padding: 0.9rem 0 0.05rem;
   position: relative;
   z-index: 1;
 }
@@ -974,10 +980,10 @@ p {
 
 .press-kit-screenshot-card {
   margin: 0;
-  border: 1px solid rgba(127, 177, 248, 0.28);
+  border: 0;
   background: rgba(7, 8, 12, 0.8);
   overflow: hidden;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.32);
 }
 
 .press-kit-screenshot-card img {
@@ -1032,7 +1038,7 @@ p {
 }
 
 .media-tab {
-  border: 1px solid rgba(255, 169, 93, 0.28);
+  border: 0;
   background: rgba(22, 11, 7, 0.74);
   color: #d9bda1;
   font-family: inherit;
@@ -1046,7 +1052,6 @@ p {
 }
 
 .media-tab:hover {
-  border-color: rgba(255, 174, 105, 0.52);
   color: #ffe3c6;
   background: rgba(44, 21, 13, 0.9);
   transform: translateY(-1px);
@@ -1054,9 +1059,8 @@ p {
 
 .media-tab.is-active {
   color: #fff6ea;
-  border-color: rgba(255, 174, 105, 0.68);
   background: linear-gradient(100deg, rgba(110, 54, 29, 0.9), rgba(63, 29, 17, 0.9));
-  box-shadow: inset 0 0 0 1px rgba(255, 198, 145, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.24);
 }
 
 .media-copy {
@@ -1075,18 +1079,18 @@ p {
 }
 
 .media-card {
-  border: 1px solid rgba(255, 166, 97, 0.22);
+  border: 0;
   background: linear-gradient(160deg, rgba(40, 21, 14, 0.9), rgba(20, 11, 8, 0.94));
   padding: 0.42rem;
   cursor: pointer;
   text-align: left;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 9px 18px rgba(0, 0, 0, 0.28);
 }
 
 .media-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 168, 98, 0.6);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.34);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.34);
 }
 
 .media-card img {
@@ -1108,7 +1112,7 @@ p {
     radial-gradient(100% 82% at 82% 76%, rgba(74, 38, 22, 0.36), transparent 62%),
     linear-gradient(150deg, rgba(33, 17, 11, 0.95), rgba(20, 11, 8, 0.98));
   filter: contrast(1.06) saturate(0.9);
-  box-shadow: inset 0 0 0 1px rgba(130, 70, 38, 0.22);
+  box-shadow: none;
 }
 
 .media-card p {
