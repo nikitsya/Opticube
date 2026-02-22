@@ -794,6 +794,8 @@ p {
 .press-kit-action {
   display: inline-flex;
   flex: 0 0 auto;
+  width: 240px;
+  min-height: 5rem;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
