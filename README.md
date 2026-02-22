@@ -82,6 +82,27 @@ npx serve .
 - Do not open pages directly via `file://` for QA, because partial loading depends on HTTP
 - Preserve relative file structure when publishing
 
+## GitHub Pages Quick Publish
+
+This repository includes a ready-to-use GitHub Actions workflow at:
+
+- `.github/workflows/deploy-pages.yml`
+
+To publish a real public website URL:
+
+1. Push this repository to GitHub and ensure the default branch is `main`.
+2. Open repository settings: `Settings -> Pages`.
+3. Set `Source` to `GitHub Actions`.
+4. Push any commit to `main` (or run the workflow manually from the `Actions` tab).
+5. Wait for the `Deploy static site to GitHub Pages` workflow to finish.
+6. Open your live URL:
+   - `https://<your-github-username>.github.io/<repository-name>/`
+
+Optional custom domain:
+
+1. In `Settings -> Pages`, set `Custom domain`.
+2. Point your domain DNS to GitHub Pages according to GitHub docs.
+
 ## Quality Expectations
 
 - Keep all public-facing copy in English
