@@ -440,7 +440,7 @@ p {
 }
 
 .featured {
-  margin-top: 1.05rem;
+  margin-top: clamp(6.5rem, 12vw, 10rem);
   border: 1px solid rgba(255, 154, 61, 0.34);
   overflow: hidden;
   background: radial-gradient(140% 100% at 0% 0%, rgba(255, 146, 77, 0.1), transparent 52%),
