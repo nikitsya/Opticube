@@ -114,7 +114,8 @@ body::after {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 0.5rem 0.72rem;
-  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%);
+  clip-path: none;
+  border-radius: 0;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
