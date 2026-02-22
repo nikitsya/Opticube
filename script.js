@@ -39,17 +39,83 @@ function initScrollResetOnReload() {
 }
 
 function initHeaderInteractions() {
+  const header = document.querySelector(".header");
   const futureBtn = document.querySelector(".future-btn");
-  if (!futureBtn) {
+  const menuToggle = document.querySelector(".header-menu-toggle");
+  const headerActions = document.querySelector(".header-actions");
+  const mobileQuery = window.matchMedia("(max-width: 680px)");
+
+  if (futureBtn) {
+    futureBtn.addEventListener("click", () => {
+      futureBtn.classList.add("is-pulse");
+      window.setTimeout(() => {
+        futureBtn.classList.remove("is-pulse");
+      }, 350);
+    });
+  }
+
+  if (!header || !menuToggle || !headerActions) {
     return;
   }
 
-  futureBtn.addEventListener("click", () => {
-    futureBtn.classList.add("is-pulse");
-    window.setTimeout(() => {
-      futureBtn.classList.remove("is-pulse");
-    }, 350);
+  const setMenuOpen = (isOpen) => {
+    header.classList.toggle("is-menu-open", isOpen);
+    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  };
+
+  setMenuOpen(false);
+
+  menuToggle.addEventListener("click", () => {
+    const shouldOpen = !header.classList.contains("is-menu-open");
+    setMenuOpen(shouldOpen);
   });
+
+  headerActions.addEventListener("click", (event) => {
+    if (!mobileQuery.matches) {
+      return;
+    }
+
+    if (!(event.target instanceof Element)) {
+      return;
+    }
+
+    const actionTrigger = event.target.closest(".header-link-btn, .future-btn");
+    if (actionTrigger) {
+      setMenuOpen(false);
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!mobileQuery.matches || !header.classList.contains("is-menu-open")) {
+      return;
+    }
+
+    if (!(event.target instanceof Node)) {
+      return;
+    }
+
+    if (!header.contains(event.target)) {
+      setMenuOpen(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setMenuOpen(false);
+    }
+  });
+
+  const handleMobileQueryChange = (event) => {
+    if (!event.matches) {
+      setMenuOpen(false);
+    }
+  };
+
+  if (typeof mobileQuery.addEventListener === "function") {
+    mobileQuery.addEventListener("change", handleMobileQueryChange);
+  } else if (typeof mobileQuery.addListener === "function") {
+    mobileQuery.addListener(handleMobileQueryChange);
+  }
 }
 
 function initFooterYear() {
