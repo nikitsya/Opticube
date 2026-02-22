@@ -156,8 +156,28 @@ body::after {
   max-width: 760px;
 }
 
+.luckrot-top-art {
+  margin-top: 1.2rem;
+  border: 1px solid rgba(255, 166, 97, 0.22);
+  background: rgba(20, 11, 8, 0.72);
+  overflow: hidden;
+  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
+}
+
+.luckrot-top-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 205px;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: pixelated;
+  filter: contrast(1.14) saturate(0.72) sepia(0.14) brightness(0.92);
+}
+
 .hero-game {
   max-width: 100%;
+  padding-top: 1.15rem;
 }
 
 .hero-game-layout {
@@ -695,6 +715,10 @@ p {
 }
 
 @media (max-width: 980px) {
+  .luckrot-top-art img {
+    max-height: 170px;
+  }
+
   .hero-game-layout {
     grid-template-columns: 1fr;
   }
