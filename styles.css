@@ -2,6 +2,7 @@
   --bg-0: #020101;
   --bg-1: #100805;
   --bg-2: #1f120c;
+  --main-solid-dark: #0b0604;
   --surface: rgba(30, 18, 12, 0.82);
   --surface-strong: rgba(22, 13, 9, 0.94);
   --line: rgba(214, 137, 73, 0.28);
@@ -506,9 +507,7 @@ p {
   margin-top: clamp(6.5rem, 12vw, 10rem);
   border: 1px solid rgba(255, 154, 61, 0.34);
   overflow: hidden;
-  background: radial-gradient(140% 100% at 0% 0%, rgba(255, 146, 77, 0.1), transparent 52%),
-    radial-gradient(120% 90% at 100% 100%, rgba(98, 42, 23, 0.26), transparent 56%),
-    linear-gradient(145deg, rgba(30, 17, 12, 0.96), rgba(11, 6, 4, 0.98));
+  background: var(--main-solid-dark);
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
   clip-path: none;
@@ -529,11 +528,7 @@ p {
 }
 
 .featured::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgba(255, 170, 94, 0.07), transparent 30%);
+  content: none;
 }
 
 .featured-main {
@@ -691,9 +686,7 @@ p {
   --media-hub-pad: clamp(1rem, 2.6vw, 1.45rem);
   margin: 1.3rem 0 2.45rem;
   border: 1px solid rgba(255, 154, 61, 0.34);
-  background: radial-gradient(140% 100% at 0% 0%, rgba(255, 146, 77, 0.09), transparent 52%),
-    radial-gradient(130% 100% at 100% 100%, rgba(98, 42, 23, 0.24), transparent 58%),
-    linear-gradient(145deg, rgba(30, 17, 12, 0.96), rgba(11, 6, 4, 0.98));
+  background: var(--main-solid-dark);
   padding: var(--media-hub-pad);
   position: relative;
   overflow: hidden;
@@ -701,21 +694,11 @@ p {
 }
 
 .media-hub::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.2;
-  background: radial-gradient(circle at 14% 20%, rgba(255, 166, 97, 0.12), transparent 34%),
-    radial-gradient(circle at 85% 78%, rgba(130, 55, 28, 0.2), transparent 42%);
+  content: none;
 }
 
 .media-hub::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgba(255, 170, 94, 0.07), transparent 34%);
+  content: none;
 }
 
 .media-hub--library {
