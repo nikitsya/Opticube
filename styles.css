@@ -479,7 +479,7 @@ p {
   grid-template-rows: auto auto 1fr auto;
   gap: 1rem;
   min-height: 100%;
-  background: linear-gradient(170deg, rgba(36, 20, 13, 0.88), rgba(18, 10, 7, 0.92));
+  background: transparent;
   border-right: 0;
   position: relative;
 }
