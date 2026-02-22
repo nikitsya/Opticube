@@ -1772,6 +1772,29 @@ p {
   .games-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .library-page .media-head--library .library-title-wrap {
+    width: 100%;
+    align-items: center;
+  }
+
+  .library-page .media-head--library .library-title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .library-page .media-head--library .press-kit-actions {
+    width: min(100%, 320px);
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin: 0 auto;
+    gap: 0.6rem;
+  }
+
+  .library-page .media-head--library .press-kit-action {
+    width: 100%;
+  }
 }
 
 @media (max-width: 680px) {
@@ -1879,12 +1902,14 @@ p {
     justify-content: flex-start;
   }
 
-  .press-kit-actions {
-    width: auto;
+  .library-page .media-head--library .press-kit-actions {
+    width: min(100%, 320px);
+    margin: 0 auto;
   }
 
-  .press-kit-action {
-    flex: 0 0 auto;
+  .library-page .media-head--library .press-kit-action {
+    width: 100%;
+    flex: 0 1 auto;
   }
 
   .library-back {
