@@ -204,8 +204,8 @@ body::after {
 
 .luckrot-video {
   margin-top: 0.7rem;
-  background: rgba(20, 11, 8, 0.94);
-  padding: 0.35rem;
+  background: transparent;
+  padding: 0;
   overflow: hidden;
   filter: blur(calc(var(--gameplay-blur-progress) * 8px));
   transform: scale(calc(1 + var(--gameplay-blur-progress) * 0.03));
@@ -220,7 +220,7 @@ body::after {
   max-height: none;
   object-fit: contain;
   pointer-events: none;
-  background: rgb(31, 21, 15);
+  background: transparent;
   filter: blur(calc(var(--gameplay-blur-progress) * 16px))
     saturate(calc(1 - var(--gameplay-blur-progress) * 0.82))
     brightness(calc(1 - var(--gameplay-blur-progress) * 0.62));
