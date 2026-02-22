@@ -782,6 +782,7 @@ p {
 .press-kit-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.55rem;
   margin-top: 0.14rem;
 }
@@ -839,17 +840,17 @@ p {
 }
 
 .press-kit-action--download {
-  background: linear-gradient(100deg, #58b977, #3f905e);
-  border-color: rgba(149, 218, 174, 0.62);
-  color: #edfff3;
+  background: linear-gradient(100deg, #9a3f35, #6f281f);
+  border-color: rgba(183, 114, 98, 0.74);
+  color: #f7e9e2;
   border-radius: 0;
-  box-shadow: 0 0 0 1px rgba(171, 233, 194, 0.22), 0 8px 0 rgba(20, 66, 40, 0.34);
+  box-shadow: 0 0 0 1px rgba(200, 133, 114, 0.28), 0 8px 0 rgba(55, 24, 19, 0.42);
 }
 
 .press-kit-action--download:hover {
-  color: #f6fff9;
-  background: linear-gradient(100deg, #66c786, #4ca16b);
-  box-shadow: 0 0 0 1px rgba(189, 241, 209, 0.28), 0 9px 0 rgba(20, 66, 40, 0.42);
+  color: #fff1ea;
+  background: linear-gradient(100deg, #ad4b3f, #7f3127);
+  box-shadow: 0 0 0 1px rgba(216, 148, 129, 0.32), 0 9px 0 rgba(55, 24, 19, 0.48);
 }
 
 .press-kit-action--disabled,
