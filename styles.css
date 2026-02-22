@@ -724,9 +724,9 @@ p {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: 0.72rem;
+  font-size: 0.84rem;
   font-weight: 700;
-  padding: 0.56rem 0.85rem;
+  padding: 0.74rem 1.15rem;
   border: 1px solid transparent;
   border-radius: 0;
   clip-path: none;
@@ -740,8 +740,8 @@ p {
 }
 
 .press-kit-action-icon {
-  width: 0.9rem;
-  height: 0.9rem;
+  width: 1.05rem;
+  height: 1.05rem;
   fill: currentColor;
   flex: 0 0 auto;
 }
