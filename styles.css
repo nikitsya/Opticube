@@ -1074,7 +1074,11 @@ p {
 .press-kit-description {
   margin-top: 5rem;
   border: 0;
-  background: transparent;
+  background-image: linear-gradient(rgba(11, 6, 4, 0.72), rgba(11, 6, 4, 0.78)),
+    url("images/characters/boss/Untitled_Viewport_006.png");
+  background-position: center bottom, center bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 100%, cover;
   padding: 1.15rem 0 1.3rem;
   position: relative;
   z-index: 1;
