@@ -171,12 +171,14 @@ body::after {
   object-position: center;
   image-rendering: pixelated;
   filter: contrast(1.14) saturate(0.72) sepia(0.14) brightness(0.92);
+  transition: filter 0.28s ease, opacity 0.28s ease;
 }
 
 .luckrot-video {
   margin-top: 0.7rem;
   background: rgba(20, 11, 8, 0.94);
   padding: 0.35rem;
+  transition: opacity 0.28s ease;
 }
 
 .luckrot-video-player {
@@ -186,6 +188,21 @@ body::after {
   max-height: 520px;
   object-fit: cover;
   background: rgb(31, 21, 15);
+  transition: filter 0.28s ease, opacity 0.28s ease;
+}
+
+body.is-reading-game-description .luckrot-top-art img {
+  filter: blur(18px) contrast(1.04) saturate(0.36) brightness(0.52);
+  opacity: 0.32;
+}
+
+body.is-reading-game-description .luckrot-video {
+  opacity: 0.48;
+}
+
+body.is-reading-game-description .luckrot-video-player {
+  filter: blur(20px) saturate(0.24) brightness(0.36);
+  opacity: 0.28;
 }
 
 .company-home {

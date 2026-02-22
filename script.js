@@ -183,6 +183,39 @@ function initMediaHub() {
   });
 }
 
+function initGameplayInactivityBlur() {
+  const descriptionSection = document.getElementById("featured");
+  const topVideo = document.querySelector(".luckrot-video-player");
+  if (!descriptionSection || !topVideo) {
+    return;
+  }
+
+  const activeClass = "is-reading-game-description";
+  let rafId = null;
+
+  function updateBlurState() {
+    const triggerLine = window.innerHeight * 0.72;
+    const descriptionTop = descriptionSection.getBoundingClientRect().top;
+    const shouldBlur = descriptionTop <= triggerLine;
+    document.body.classList.toggle(activeClass, shouldBlur);
+  }
+
+  function requestBlurStateUpdate() {
+    if (rafId !== null) {
+      return;
+    }
+
+    rafId = window.requestAnimationFrame(() => {
+      rafId = null;
+      updateBlurState();
+    });
+  }
+
+  updateBlurState();
+  window.addEventListener("scroll", requestBlurStateUpdate, { passive: true });
+  window.addEventListener("resize", requestBlurStateUpdate);
+}
+
 async function bootstrap() {
   try {
     await Promise.all([
@@ -196,6 +229,7 @@ async function bootstrap() {
   initHeaderInteractions();
   initFooterYear();
   initMediaHub();
+  initGameplayInactivityBlur();
 }
 
 bootstrap();
