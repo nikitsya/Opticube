@@ -571,9 +571,11 @@ p {
   letter-spacing: 0.1em;
 }
 
-.featured-title {
+.featured-title,
+.library-title {
   margin: 0;
   font-size: clamp(2.1rem, 5vw, 3rem);
+  line-height: 0.95;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -765,10 +767,7 @@ p {
 
 .library-title {
   margin: 0;
-  font-size: clamp(2.1rem, 4.6vw, 3.1rem);
-  line-height: 0.95;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: clamp(2.1rem, 5vw, 3rem);
 }
 
 .library-subline {
@@ -890,12 +889,20 @@ p {
   min-width: 0;
 }
 
-.press-kit-factsheet-title {
-  margin: 0;
+.press-kit-factsheet-title,
+.press-kit-description-title,
+.press-kit-trailers-title,
+.press-kit-screenshots-title,
+.press-kit-media-library-title {
   font-size: clamp(1.75rem, 3.8vw, 2.3rem);
+  line-height: 1;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #7fb2ff;
+  color: #efbf93;
+}
+
+.press-kit-factsheet-title {
+  margin: 0;
 }
 
 .press-kit-factsheet-capsule {
@@ -948,10 +955,6 @@ p {
 
 .press-kit-description-title {
   margin: 0;
-  font-size: clamp(1.75rem, 3.8vw, 2.3rem);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #935da3;
 }
 
 .press-kit-description-lead {
@@ -980,10 +983,6 @@ p {
 
 .press-kit-trailers-title {
   margin: 0;
-  font-size: clamp(1.75rem, 3.8vw, 2.3rem);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #8abaff;
 }
 
 .press-kit-trailer-frame {
@@ -1015,10 +1014,6 @@ p {
 
 .press-kit-screenshots-title {
   margin: 0;
-  font-size: clamp(1.75rem, 3.8vw, 2.3rem);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #8abaff;
 }
 
 .press-kit-screenshots-grid {
@@ -1030,10 +1025,6 @@ p {
 
 .press-kit-media-library-title {
   margin: 2.2rem 0 0;
-  font-size: clamp(1.75rem, 3.8vw, 2.3rem);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #8abaff;
 }
 
 .press-kit-media-controls {
