@@ -1,0 +1,27 @@
+{
+  "characters": [
+    { "src": "images/characters/Fodder_Body.png", "label": "Fodder" },
+    { "src": "images/characters/Flyer_Body.png", "label": "Flyer" },
+    { "src": "images/characters/Giant_Body.png", "label": "Giant" },
+    { "src": "images/characters/Pakman_Body.png", "label": "Pakman" },
+    { "src": "images/characters/Pullerman_Body.png", "label": "Pullerman" },
+    { "src": "images/characters/Rager_Body.png", "label": "Rager" },
+    { "src": "images/characters/Sniper_Body.png", "label": "Sniper" }
+  ],
+  "weapons": [
+    { "src": "images/weapons/AK_Screen2.png", "label": "AK" },
+    { "src": "images/weapons/Burst_Screen2.png", "label": "Burst" },
+    { "src": "images/weapons/Pistol_Screen2.png", "label": "Pistol" },
+    { "src": "images/weapons/Rifle_Screen2.png", "label": "Rifle" },
+    { "src": "images/weapons/Shotgun_Screen2.png", "label": "Shotgun" },
+    { "src": "images/weapons/Sword_Screen2.png", "label": "Sword" },
+    { "src": "images/weapons/UZI_Screen2.png", "label": "UZI" }
+  ],
+  "bots": [
+    { "src": "images/bots/BombBot.png", "label": "Bomb Bot" },
+    { "src": "images/bots/RifleBot.png", "label": "Rifle Bot" },
+    { "src": "images/bots/SawBot.png", "label": "Saw Bot" },
+    { "src": "images/bots/ShockBot.png", "label": "Shock Bot" },
+    { "src": "images/bots/ShotgunBot.png", "label": "Shotgun Bot" }
+  ]
+}

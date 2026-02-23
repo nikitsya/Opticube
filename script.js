@@ -127,7 +127,7 @@ function initFooterYear() {
   currentYearNode.textContent = String(new Date().getFullYear());
 }
 
-function initMediaHub() {
+function getDefaultMediaData() {
   const characterAssets = [
     "Fodder_Body.png",
     "Flyer_Body.png",
@@ -156,7 +156,7 @@ function initMediaHub() {
     "ShotgunBot.png",
   ];
 
-  const mediaData = {
+  return {
     characters: characterAssets.map((filename) => {
       const label = filename.replace("_Body.png", "").replace(/_/g, " ");
       return {
@@ -179,12 +179,51 @@ function initMediaHub() {
       };
     }),
   };
+}
 
+function isValidMediaCategory(items) {
+  return Array.isArray(items) && items.every((item) => item && typeof item.src === "string" && typeof item.label === "string");
+}
+
+async function loadMediaData() {
+  const response = await fetch("data/media-library.json", { cache: "no-cache" });
+  if (!response.ok) {
+    throw new Error(`Failed to load data/media-library.json (${response.status})`);
+  }
+
+  const mediaData = await response.json();
+  if (
+    !mediaData ||
+    typeof mediaData !== "object" ||
+    !isValidMediaCategory(mediaData.characters) ||
+    !isValidMediaCategory(mediaData.weapons) ||
+    !isValidMediaCategory(mediaData.bots)
+  ) {
+    throw new Error("Invalid media data format");
+  }
+
+  return mediaData;
+}
+
+async function initMediaHub() {
   const mediaGrid = document.getElementById("media-grid");
   const mediaTabs = document.querySelectorAll(".media-tab");
   const lightbox = document.getElementById("lightbox");
   const lightboxImage = document.getElementById("lightbox-image");
   const lightboxClose = document.getElementById("lightbox-close");
+  const screenshotsSlider = document.querySelector(".press-kit-screenshots-slider");
+  const hasMediaHubUi = mediaGrid || mediaTabs.length > 0 || lightbox || screenshotsSlider;
+  if (!hasMediaHubUi) {
+    return;
+  }
+
+  let mediaData = getDefaultMediaData();
+  try {
+    mediaData = await loadMediaData();
+  } catch (error) {
+    console.warn("Using built-in media data fallback:", error);
+  }
+
   let activeMedia = "characters";
 
   function openLightbox(src, label) {
@@ -256,7 +295,6 @@ function initMediaHub() {
     renderMedia(activeMedia);
   }
 
-  const screenshotsSlider = document.querySelector(".press-kit-screenshots-slider");
   const screenshotsGrid = screenshotsSlider ? screenshotsSlider.querySelector(".press-kit-screenshots-grid") : null;
   if (screenshotsGrid) {
     const screenshotCards = Array.from(screenshotsGrid.querySelectorAll(".press-kit-screenshot-card"));
@@ -435,7 +473,7 @@ async function bootstrap() {
 
   initHeaderInteractions();
   initFooterYear();
-  initMediaHub();
+  await initMediaHub();
   initGameplayInactivityBlur();
 }
 

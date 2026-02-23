@@ -67,6 +67,8 @@ http://localhost:8080
 ├── presskit.html
 ├── styles.css
 ├── script.js
+├── data/
+│   └── media-library.json
 ├── partials/
 │   ├── header.html
 │   └── footer.html
@@ -80,6 +82,7 @@ http://localhost:8080
 - Edit `presskit.html` for press kit content.
 - Edit `styles.css` for styling and responsive behavior.
 - Edit `script.js` for interactions and partial loading logic.
+- Edit `data/media-library.json` for Visual Library items on the Press Kit page.
 
 ## License
 
