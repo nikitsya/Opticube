@@ -6,13 +6,13 @@ Official static website for **OptiCube Games** and the **LUCKROT** project.
 
 - Main website: [https://opticubestudio.com](https://opticubestudio.com)
 - LUCKROT page: [https://opticubestudio.com/luckrot.html](https://opticubestudio.com/luckrot.html)
-- Press Kit page: [https://opticubestudio.com/presskit.html](https://opticubestudio.com/presskit.html)
+- LUCKROT Press Kit page: [https://opticubestudio.com/presskit.html](https://opticubestudio.com/presskit.html)
 
 ## What This Project Includes
 
 - Company landing page
 - LUCKROT game page
-- Press Kit with factsheet, description, trailer, screenshots, and media library
+- LUCKROT Press Kit with factsheet, description, trailer, screenshots, and media library
 - Shared header/footer loaded from partials
 - Responsive layout for desktop, tablet, and mobile
 
@@ -79,10 +79,10 @@ http://localhost:8080
 
 - Edit `index.html` for company homepage content.
 - Edit `luckrot.html` for game page content and links.
-- Edit `presskit.html` for press kit content.
+- Edit `presskit.html` for LUCKROT press kit content.
 - Edit `styles.css` for styling and responsive behavior.
 - Edit `script.js` for interactions and partial loading logic.
-- Edit `data/media-library.json` for Visual Library items on the Press Kit page.
+- Edit `data/media-library.json` for Visual Library items on the LUCKROT Press Kit page.
 
 ## License
 
