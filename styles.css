@@ -157,6 +157,31 @@ body::after {
   gap: 0.55rem;
 }
 
+.header-actions-divider {
+  position: relative;
+  width: 8px;
+  height: 20px;
+  flex: 0 0 8px;
+}
+
+.header-actions-divider::before,
+.header-actions-divider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: rgba(255, 170, 96, 0.34);
+}
+
+.header-actions-divider::before {
+  left: 1px;
+}
+
+.header-actions-divider::after {
+  right: 1px;
+}
+
 .header-menu-toggle {
   display: none;
   align-items: center;
@@ -1589,6 +1614,10 @@ main {
 
   .header.is-menu-open .header-actions {
     display: flex;
+  }
+
+  .header-actions-divider {
+    display: none;
   }
 
   .future-btn,
