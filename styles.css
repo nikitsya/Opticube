@@ -753,11 +753,14 @@ p {
 }
 
 .future-page {
-  padding-top: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
 }
 
-.future-hub {
-  margin: 1.3rem 0 2.45rem;
+.media-hub.future-hub {
+  margin: 0;
   border: 0;
   background: transparent;
   padding: 0;
@@ -771,7 +774,12 @@ p {
 }
 
 .future-hub .library-title-wrap {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 0.75rem;
+  text-align: left;
 }
 
 .future-body {
