@@ -6,7 +6,7 @@ Official static website for **OptiCube Games** and the **LUCKROT** project.
 
 - Main website: [https://opticubestudio.com](https://opticubestudio.com)
 - LUCKROT page: [https://opticubestudio.com/luckrot/](https://opticubestudio.com/luckrot/)
-- LUCKROT Press Kit page: [https://opticubestudio.com/press-kit/](https://opticubestudio.com/press-kit/)
+- LUCKROT Press Kit page: [https://opticubestudio.com/luckrot/press-kit/](https://opticubestudio.com/luckrot/press-kit/)
 - Future Games page: [https://opticubestudio.com/future-games/](https://opticubestudio.com/future-games/)
 
 ## What This Project Includes
@@ -64,7 +64,9 @@ http://localhost:8080
 .
 ├── index.html
 ├── luckrot/
-│   └── index.html
+│   ├── index.html
+│   └── press-kit/
+│       └── index.html
 ├── press-kit/
 │   └── index.html
 ├── future-games/
@@ -86,12 +88,12 @@ http://localhost:8080
 
 - Edit `index.html` for company homepage content.
 - Edit `luckrot/index.html` for game page content and links.
-- Edit `press-kit/index.html` for LUCKROT press kit content.
+- Edit `luckrot/press-kit/index.html` for LUCKROT press kit content.
 - Edit `future-games/index.html` for Future Games page content.
 - Edit `styles.css` for styling and responsive behavior.
 - Edit `script.js` for interactions and partial loading logic.
 - Edit `data/media-library.json` for Visual Library items on the LUCKROT Press Kit page.
-- Keep `luckrot.html`, `presskit.html`, and `future-games.html` as legacy redirect files only.
+- Keep `luckrot.html`, `presskit.html`, `future-games.html`, and `press-kit/index.html` as legacy redirect files only.
 
 ## License
 
