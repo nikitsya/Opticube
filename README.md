@@ -5,21 +5,21 @@ Official static website for **OptiCube Games** and the **LUCKROT** project.
 ## Live Website
 
 - Main website: [https://opticubestudio.com](https://opticubestudio.com)
-- LUCKROT page: [https://opticubestudio.com/luckrot.html](https://opticubestudio.com/luckrot.html)
-- LUCKROT Press Kit page: [https://opticubestudio.com/presskit.html](https://opticubestudio.com/presskit.html)
+- LUCKROT page: [https://opticubestudio.com/luckrot/](https://opticubestudio.com/luckrot/)
+- LUCKROT Press Kit page: [https://opticubestudio.com/press-kit/](https://opticubestudio.com/press-kit/)
+- Future Games page: [https://opticubestudio.com/future-games/](https://opticubestudio.com/future-games/)
 
 ## What This Project Includes
 
 - Company landing page
 - LUCKROT game page
 - LUCKROT Press Kit with factsheet, description, trailer, screenshots, and media library
+- Future Games page
 - Shared header/footer loaded from partials
 - Responsive layout for desktop, tablet, and mobile
 
-## Planned Next Pages
+## Planned Next Page
 
-- `Future Games` page
-  - The `Future Games` button already exists in the header and will be connected to a dedicated page.
 - `MEDIA DOWNLOAD` page
   - The `MEDIA DOWNLOAD` button exists on the Press Kit and is currently disabled.
   - It will be connected to a page where press/media assets can be downloaded.
@@ -63,8 +63,15 @@ http://localhost:8080
 ```text
 .
 ├── index.html
+├── luckrot/
+│   └── index.html
+├── press-kit/
+│   └── index.html
+├── future-games/
+│   └── index.html
 ├── luckrot.html
 ├── presskit.html
+├── future-games.html
 ├── styles.css
 ├── script.js
 ├── data/
@@ -78,11 +85,13 @@ http://localhost:8080
 ## Editing Guide
 
 - Edit `index.html` for company homepage content.
-- Edit `luckrot.html` for game page content and links.
-- Edit `presskit.html` for LUCKROT press kit content.
+- Edit `luckrot/index.html` for game page content and links.
+- Edit `press-kit/index.html` for LUCKROT press kit content.
+- Edit `future-games/index.html` for Future Games page content.
 - Edit `styles.css` for styling and responsive behavior.
 - Edit `script.js` for interactions and partial loading logic.
 - Edit `data/media-library.json` for Visual Library items on the LUCKROT Press Kit page.
+- Keep `luckrot.html`, `presskit.html`, and `future-games.html` as legacy redirect files only.
 
 ## License
 
