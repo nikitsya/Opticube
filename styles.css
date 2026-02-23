@@ -50,6 +50,9 @@ body {
 
 body {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   overflow-x: hidden;
   color: var(--text);
   font-family: "Space Grotesk", sans-serif;
@@ -753,10 +756,36 @@ p {
   padding-top: 0.2rem;
 }
 
+.future-hub {
+  margin: 1.3rem 0 2.45rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
+.future-hub .media-head {
+  display: block;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.future-hub .library-title-wrap {
+  justify-content: center;
+}
+
 .future-body {
   margin-top: 0.9rem;
   display: grid;
   gap: 0.75rem;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+#footer-root {
+  margin-top: auto;
 }
 
 .media-hub {
