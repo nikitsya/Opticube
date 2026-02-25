@@ -895,11 +895,17 @@ main {
 }
 
 .press-kit-action--download {
+  width: 252px;
   background: var(--btn-red-solid);
   border-color: rgba(183, 114, 98, 0.74);
   color: #f7e9e2;
   border-radius: 0;
   box-shadow: 0 0 0 1px rgba(200, 133, 114, 0.28), 0 8px 0 rgba(55, 24, 19, 0.42);
+}
+
+.press-kit-action--download .press-kit-action-icon {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .press-kit-action--download:hover {
