@@ -15,7 +15,6 @@ async function loadPartial(path, targetId) {
 function initScrollResetOnReload() {
   const path = window.location.pathname;
   const isLuckrotPage =
-    path.endsWith("/luckrot") ||
     path.endsWith("/luckrot/") ||
     path.endsWith("/luckrot/index.html") ||
     path.endsWith("/luckrot.html") ||
@@ -41,25 +40,6 @@ function initScrollResetOnReload() {
   scrollTop();
   window.requestAnimationFrame(scrollTop);
   window.addEventListener("load", scrollTop, { once: true });
-}
-
-function normalizePublicRoutes() {
-  const path = window.location.pathname;
-  const normalizedPathByRoute = {
-    "/luckrot/": "/luckrot",
-    "/luckrot/index.html": "/luckrot",
-    "/luckrot/press-kit/": "/luckrot/press-kit",
-    "/luckrot/press-kit/index.html": "/luckrot/press-kit",
-    "/future-games/": "/future-games",
-    "/future-games/index.html": "/future-games",
-  };
-  const normalizedPath = normalizedPathByRoute[path];
-  if (!normalizedPath) {
-    return;
-  }
-
-  const nextUrl = `${normalizedPath}${window.location.search}${window.location.hash}`;
-  window.history.replaceState(window.history.state, "", nextUrl);
 }
 
 function initHeaderInteractions() {
@@ -485,7 +465,6 @@ function initGameplayInactivityBlur() {
 
 async function bootstrap() {
   initScrollResetOnReload();
-  normalizePublicRoutes();
 
   try {
     await Promise.all([
