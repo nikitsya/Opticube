@@ -50,6 +50,8 @@ function normalizePublicRoutes() {
     "/luckrot/index.html": "/luckrot",
     "/luckrot/press-kit/": "/luckrot/press-kit",
     "/luckrot/press-kit/index.html": "/luckrot/press-kit",
+    "/future-games/": "/future-games",
+    "/future-games/index.html": "/future-games",
   };
   const normalizedPath = normalizedPathByRoute[path];
   if (!normalizedPath) {
