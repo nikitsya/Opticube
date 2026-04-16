@@ -18,10 +18,9 @@ There is no build step and no framework. The site is meant to be deployed as sta
 
 ## Site Showcase
 
-<video src="images/website_record/screencast.mp4" controls muted playsinline preload="metadata" width="100%">
-  Your browser does not support embedded video playback. Download the showcase here:
-  <a href="images/website_record/screencast.mp4">screencast.mp4</a>
-</video>
+<img src="images/website_record/screencast.gif" alt="OptiCube website showcase" width="100%">
+
+Download the showcase: [screencast.gif](images/website_record/screencast.gif)
 
 ## Live Routes
 
