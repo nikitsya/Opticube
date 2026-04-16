@@ -71,9 +71,6 @@ http://localhost:8080
 │   └── index.html
 ├── future-games/
 │   └── index.html
-├── luckrot.html
-├── presskit.html
-├── future-games.html
 ├── styles.css
 ├── script.js
 ├── data/
@@ -93,7 +90,6 @@ http://localhost:8080
 - Edit `styles.css` for styling and responsive behavior.
 - Edit `script.js` for interactions and partial loading logic.
 - Edit `data/media-library.json` for Visual Library items on the LUCKROT Press Kit page.
-- Keep `luckrot.html`, `presskit.html`, `future-games.html`, and `press-kit/index.html` as legacy redirect files only.
 
 ## License
 

@@ -15,10 +15,7 @@ async function loadPartial(path, targetId) {
 function initScrollResetOnReload() {
   const path = window.location.pathname;
   const isLuckrotPage =
-    path.endsWith("/luckrot/") ||
-    path.endsWith("/luckrot/index.html") ||
-    path.endsWith("/luckrot.html") ||
-    path.endsWith("luckrot.html");
+    path.endsWith("/luckrot/") || path.endsWith("/luckrot/index.html");
   if (!isLuckrotPage) {
     return;
   }
