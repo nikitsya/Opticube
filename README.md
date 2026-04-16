@@ -4,7 +4,7 @@ Official static website for OptiCube Games and the LUCKROT promotional pages.
 
 ## Overview
 
-This repository contains a small multi-page marketing site built with plain HTML, CSS, and JavaScript.
+This repository contains a small multipage marketing site built with plain HTML, CSS, and JavaScript.
 
 It currently includes:
 
@@ -18,9 +18,9 @@ There is no build step and no framework. The site is meant to be deployed as sta
 
 ## Site Showcase
 
-<video src="images/website_record/screencast.mov" controls muted playsinline preload="metadata" width="100%">
+<video src="images/website_record/screencast.mp4" controls muted playsinline preload="metadata" width="100%">
   Your browser does not support embedded video playback. Download the showcase here:
-  <a href="images/website_record/screencast.mov">screencast.mov</a>
+  <a href="images/website_record/screencast.mp4">screencast.mp4</a>
 </video>
 
 ## Live Routes
