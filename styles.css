@@ -312,10 +312,12 @@ body::after {
 .luckrot-video-player {
   display: block;
   width: 100%;
+  aspect-ratio: 16 / 9;
   height: auto;
   max-height: none;
   object-fit: contain;
   pointer-events: none;
+  border: 0;
   background: transparent;
   filter: blur(calc(var(--gameplay-blur-progress) * 16px))
     saturate(calc(1 - var(--gameplay-blur-progress) * 0.82))
