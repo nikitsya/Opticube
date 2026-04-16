@@ -48,6 +48,11 @@ body {
   min-height: 100%;
 }
 
+html {
+  background-color: var(--main-solid-dark);
+  overscroll-behavior-y: none;
+}
+
 body {
   position: relative;
   display: flex;
@@ -56,6 +61,7 @@ body {
   overflow-x: hidden;
   color: var(--text);
   font-family: "Space Grotesk", sans-serif;
+  background-color: var(--main-solid-dark);
   background-image: linear-gradient(rgba(9, 4, 3, 0.76), rgba(9, 4, 3, 0.82)),
     url("images/background.png");
   background-position: center center, center center;
